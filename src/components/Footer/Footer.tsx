@@ -58,7 +58,7 @@ export default function Footer() {
 
           <p>
             © {anioActual}{" "}
-            Realty Natura Verde.
+            Realty Natural Verde.
             Todos los derechos reservados.
           </p>
 

@@ -328,7 +328,7 @@ export default function AdminLogin() {
           >
             <img
               src={logo}
-              alt="Realty Natura Verde"
+              alt="Realty Natural Verde"
               className="admin-login__logo"
             />
           </Link>

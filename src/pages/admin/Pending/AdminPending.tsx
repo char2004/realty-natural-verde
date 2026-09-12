@@ -320,7 +320,7 @@ export default function AdminPending() {
 
           <img
             src={logo}
-            alt="Realty Natura Verde"
+            alt="Realty Natural Verde"
             className="admin-pending__logo"
           />
 

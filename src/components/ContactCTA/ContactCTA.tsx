@@ -287,7 +287,7 @@ export default function ContactCTA() {
             <span
               className="contactCTA__selloGrande"
             >
-              Natura
+              Natural
             </span>
 
             <span

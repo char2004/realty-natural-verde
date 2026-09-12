@@ -27,7 +27,7 @@ export default function ServicesSection() {
 
     const mensaje =
       encodeURIComponent(
-        `Hola, me gustaría recibir más información sobre el servicio de ${servicio} de Realty Natura Verde.`
+        `Hola, me gustaría recibir más información sobre el servicio de ${servicio} de Realty Natural Verde.`
       );
 
     window.open(

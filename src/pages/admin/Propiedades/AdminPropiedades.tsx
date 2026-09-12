@@ -669,8 +669,7 @@ export default function AdminProperties() {
 
             <p>
               Administra las propiedades
-              disponibles, ofertas y ventas
-              publicadas en Natura Verde.
+              disponibles, ofertas y ventas.
             </p>
 
           </div>
