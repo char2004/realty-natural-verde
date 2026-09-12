@@ -25,7 +25,7 @@ import ContactCTA
   from "../../components/ContactCTA/ContactCTA";
 
 import Servicios
-  from "../../components/servicios/Servicios";
+  from "../../components/Servicios/Servicios";
 
 import Footer
   from "../../components/Footer/Footer";
