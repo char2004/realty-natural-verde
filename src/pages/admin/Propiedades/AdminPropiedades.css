@@ -1,0 +1,983 @@
+.admin-properties {
+  min-height: 100vh;
+  background:
+    linear-gradient(
+      145deg,
+      #f7f5ed 0%,
+      #fbfaf6 50%,
+      #f1f5ec 100%
+    );
+  color: #40483b;
+}
+
+
+/* =========================================
+   TOPBAR
+   ========================================= */
+
+.admin-properties__topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+  border-bottom:
+    1px solid rgba(83, 100, 71, 0.1);
+
+  background:
+    rgba(255, 255, 252, 0.94);
+
+  backdrop-filter: blur(15px);
+}
+
+
+.admin-properties__topbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: min(1380px, 92%);
+  min-height: 78px;
+
+  margin: 0 auto;
+}
+
+
+.admin-properties__brand {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+
+.admin-properties__logo {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+}
+
+
+.admin-properties__brand-divider {
+  width: 1px;
+  height: 29px;
+
+  background: #dedfd6;
+}
+
+
+.admin-properties__brand > span {
+  color: #72796a;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+.admin-properties__user {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+}
+
+
+.admin-properties__avatar {
+  display: grid;
+  place-items: center;
+
+  width: 40px;
+  height: 40px;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e4edda,
+      #cadcba
+    );
+
+  color: #47633c;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+
+.admin-properties__avatar img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+.admin-properties__user-info {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 100px;
+}
+
+
+.admin-properties__user-info strong {
+  color: #46513f;
+
+  font-size: 13px;
+}
+
+
+.admin-properties__user-info span {
+  margin-top: 2px;
+
+  color: #999d93;
+
+  font-size: 11px;
+}
+
+
+.admin-properties__logout {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  min-height: 39px;
+
+  margin-left: 7px;
+
+  padding: 0 13px;
+
+  border: 1px solid #dedfd8;
+  border-radius: 11px;
+
+  background: #ffffff;
+
+  color: #6d7268;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.admin-properties__logout:hover:not(:disabled) {
+  border-color: #c9d1c2;
+
+  background: #f7faf4;
+
+  color: #49623e;
+}
+
+
+/* =========================================
+   CONTENEDOR
+   ========================================= */
+
+.admin-properties__container {
+  width: min(1380px, 92%);
+
+  margin: 0 auto;
+
+  padding: 55px 0 80px;
+}
+
+
+/* =========================================
+   ENCABEZADO
+   ========================================= */
+
+.admin-properties__heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 32px;
+}
+
+
+.admin-properties__eyebrow {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #7b955f;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+
+.admin-properties__heading h1 {
+  margin: 0;
+
+  color: #34432e;
+
+  font-size:
+    clamp(
+      32px,
+      5vw,
+      46px
+    );
+
+  line-height: 1.1;
+}
+
+
+.admin-properties__heading p {
+  max-width: 570px;
+
+  margin: 10px 0 0;
+
+  color: #858a7f;
+
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+
+.admin-properties__add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  min-height: 49px;
+
+  padding: 0 20px;
+
+  border: none;
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #5c8049,
+      #365e34
+    );
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 22px
+    rgba(55, 92, 51, 0.2);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.admin-properties__add:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 13px 27px
+    rgba(55, 92, 51, 0.27);
+}
+
+
+/* =========================================
+   ESTADÍSTICAS
+   ========================================= */
+
+.admin-properties__stats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 15px;
+
+  margin-bottom: 24px;
+}
+
+
+.admin-stat {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  min-width: 0;
+
+  padding: 18px;
+
+  border:
+    1px solid rgba(82, 99, 70, 0.1);
+
+  border-radius: 17px;
+
+  background: rgba(255, 255, 255, 0.88);
+
+  box-shadow:
+    0 7px 24px rgba(70, 77, 60, 0.045);
+}
+
+
+.admin-stat__icon {
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  width: 43px;
+  height: 43px;
+
+  border-radius: 12px;
+}
+
+
+.admin-stat__icon--total {
+  background: #eef2e9;
+  color: #667b58;
+}
+
+
+.admin-stat__icon--available {
+  background: #e7f1df;
+  color: #507b42;
+}
+
+
+.admin-stat__icon--offer {
+  background: #fff3d6;
+  color: #ad7c20;
+}
+
+
+.admin-stat__icon--sold {
+  background: #eee8de;
+  color: #846c4c;
+}
+
+
+.admin-stat > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.admin-stat strong {
+  color: #3f493a;
+
+  font-size: 22px;
+  line-height: 1;
+}
+
+
+.admin-stat span {
+  margin-top: 5px;
+
+  color: #91968b;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   BUSCADOR
+   ========================================= */
+
+.admin-properties__tools {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr) auto;
+
+  gap: 13px;
+
+  margin-bottom: 32px;
+}
+
+
+.admin-properties__search {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  min-height: 51px;
+
+  padding: 0 16px;
+
+  border: 1px solid #dfe1d9;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  color: #8a9182;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.admin-properties__search:focus-within {
+  border-color: #789466;
+
+  box-shadow:
+    0 0 0 4px rgba(89, 127, 68, 0.09);
+}
+
+
+.admin-properties__search input {
+  width: 100%;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: #485044;
+
+  font-size: 13px;
+}
+
+
+.admin-properties__search input::placeholder {
+  color: #a4a89e;
+}
+
+
+.admin-properties__filter {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  min-width: 175px;
+  min-height: 51px;
+
+  padding: 0 14px;
+
+  border: 1px solid #dfe1d9;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  color: #7a8272;
+}
+
+
+.admin-properties__filter select {
+  flex: 1;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: #60675b;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   LISTADO
+   ========================================= */
+
+.admin-properties__listing {
+  padding: 26px;
+
+  border:
+    1px solid rgba(82, 99, 70, 0.1);
+
+  border-radius: 21px;
+
+  background:
+    rgba(255, 255, 255, 0.72);
+
+  box-shadow:
+    0 10px 35px rgba(70, 77, 60, 0.045);
+}
+
+
+.admin-properties__listing-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 22px;
+}
+
+
+.admin-properties__listing-header h2 {
+  margin: 0;
+
+  color: #46513f;
+
+  font-size: 18px;
+}
+
+
+.admin-properties__listing-header p {
+  margin: 5px 0 0;
+
+  color: #999d93;
+
+  font-size: 12px;
+}
+
+
+.admin-properties__results {
+  flex-shrink: 0;
+
+  padding: 7px 11px;
+
+  border-radius: 999px;
+
+  background: #f0f3ec;
+
+  color: #77846d;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   GRID
+   ========================================= */
+
+.admin-properties__grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 19px;
+}
+
+
+/* =========================================
+   TARJETA DE PROPIEDAD
+   ========================================= */
+
+.admin-property-card {
+  min-width: 0;
+
+  overflow: hidden;
+
+  border: 1px solid #e5e6df;
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+.admin-property-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #d5dacd;
+
+  box-shadow:
+    0 13px 30px rgba(66, 75, 58, 0.1);
+}
+
+
+.admin-property-card__image {
+  position: relative;
+
+  height: 190px;
+
+  overflow: hidden;
+
+  background: #ecefe7;
+}
+
+
+.admin-property-card__image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.4s ease;
+}
+
+
+.admin-property-card:hover
+.admin-property-card__image img {
+  transform: scale(1.035);
+}
+
+
+.admin-property-card__status {
+  position: absolute;
+
+  top: 13px;
+  left: 13px;
+
+  padding: 7px 10px;
+
+  border-radius: 999px;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+.admin-property-card__status--disponible {
+  background: #e8f2df;
+  color: #46713a;
+}
+
+
+.admin-property-card__status--oferta {
+  background: #fff0c7;
+  color: #986d18;
+}
+
+
+.admin-property-card__status--vendida {
+  background: #ece7df;
+  color: #705f49;
+}
+
+
+.admin-property-card__content {
+  padding: 18px;
+}
+
+
+.admin-property-card__content h3 {
+  margin: 0;
+
+  overflow: hidden;
+
+  color: #414b3c;
+
+  font-size: 16px;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.admin-property-card__location {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  margin-top: 8px;
+
+  color: #8d9387;
+
+  font-size: 11px;
+}
+
+
+.admin-property-card__location span {
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.admin-property-card__footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-top: 20px;
+  padding-top: 15px;
+
+  border-top: 1px solid #eeeeea;
+}
+
+
+.admin-property-card__price {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+
+.admin-property-card__price span {
+  margin-bottom: 3px;
+
+  color: #a1a49b;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+
+.admin-property-card__price strong {
+  overflow: hidden;
+
+  color: #49643e;
+
+  font-size: 15px;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.admin-property-card__edit {
+  flex-shrink: 0;
+
+  min-height: 36px;
+
+  padding: 0 12px;
+
+  border: 1px solid #d9dfd4;
+  border-radius: 10px;
+
+  background: #f8faf6;
+
+  color: #5b7350;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+.admin-property-card__edit:hover {
+  border-color: #bccbb4;
+
+  background: #edf4e9;
+}
+
+
+/* =========================================
+   SIN RESULTADOS
+   ========================================= */
+
+.admin-properties__empty {
+  padding: 70px 20px;
+
+  text-align: center;
+}
+
+
+.admin-properties__empty-icon {
+  display: grid;
+  place-items: center;
+
+  width: 58px;
+  height: 58px;
+
+  margin: 0 auto 15px;
+
+  border-radius: 50%;
+
+  background: #f0f3ec;
+
+  color: #809074;
+}
+
+
+.admin-properties__empty h3 {
+  margin: 0;
+
+  color: #566050;
+
+  font-size: 16px;
+}
+
+
+.admin-properties__empty p {
+  margin: 7px 0 0;
+
+  color: #989d93;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+  .admin-properties__stats {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  .admin-properties__grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .admin-properties__topbar-content {
+    min-height: 68px;
+  }
+
+
+  .admin-properties__brand-divider,
+  .admin-properties__brand > span,
+  .admin-properties__user-info {
+    display: none;
+  }
+
+
+  .admin-properties__logo {
+    width: 105px;
+  }
+
+
+  .admin-properties__logout span {
+    display: none;
+  }
+
+
+  .admin-properties__logout {
+    width: 40px;
+
+    margin-left: 2px;
+    padding: 0;
+
+    justify-content: center;
+  }
+
+
+  .admin-properties__container {
+    width: min(92%, 600px);
+
+    padding:
+      36px 0 55px;
+  }
+
+
+  .admin-properties__heading {
+    align-items: stretch;
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+
+  .admin-properties__add {
+    width: 100%;
+  }
+
+
+  .admin-properties__tools {
+    grid-template-columns: 1fr;
+  }
+
+
+  .admin-properties__filter {
+    width: auto;
+  }
+
+
+  .admin-properties__listing {
+    padding: 19px 15px;
+  }
+
+
+  .admin-properties__listing-header {
+    align-items: flex-start;
+  }
+
+
+  .admin-properties__listing-header p {
+    display: none;
+  }
+
+
+  .admin-properties__grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 450px) {
+
+  .admin-properties__stats {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+  }
+
+
+  .admin-stat {
+    gap: 10px;
+
+    padding: 13px 11px;
+  }
+
+
+  .admin-stat__icon {
+    width: 36px;
+    height: 36px;
+  }
+
+
+  .admin-stat strong {
+    font-size: 18px;
+  }
+
+
+  .admin-stat span {
+    font-size: 9px;
+  }
+
+
+  .admin-property-card__image {
+    height: 175px;
+  }
+
+}

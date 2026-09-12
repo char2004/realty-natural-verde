@@ -1,0 +1,1672 @@
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+  --fincas-verde-oscuro: #264b31;
+  --fincas-verde: #4f7f45;
+  --fincas-verde-claro: #8daf67;
+
+  --fincas-cafe: #755339;
+  --fincas-cafe-claro: #a7744c;
+
+  --fincas-naranja: #e98b2f;
+  --fincas-naranja-claro: #f4b059;
+
+  --fincas-amarillo: #f3cc62;
+
+  --fincas-crema: #fff9ef;
+  --fincas-blanco: #ffffff;
+
+  --fincas-gris: #6d746c;
+  --fincas-gris-claro: #e5e4de;
+
+  --fincas-sombra:
+    0 18px 45px
+    rgba(
+      49,
+      66,
+      43,
+      0.12
+    );
+}
+
+
+/* =========================================
+   CONTENEDOR GENERAL
+========================================= */
+
+.fincas {
+  width: 100%;
+  min-height: 100vh;
+
+  overflow-x: hidden;
+
+  color: #283628;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fffdf8 0%,
+      #f6f8ef 48%,
+      #fff8ee 100%
+    );
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.fincas__hero {
+  position: relative;
+
+  overflow: hidden;
+
+  padding:
+    82px 20px 115px;
+
+  background:
+    linear-gradient(
+      120deg,
+      #31583a 0%,
+      #688948 44%,
+      #ba7a3f 100%
+    );
+
+  color:
+    #ffffff;
+}
+
+
+/* =========================================
+   DECORACIONES HERO
+========================================= */
+
+.fincas__hero-decoracion {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+.fincas__hero-decoracion--uno {
+  width:
+    330px;
+
+  height:
+    330px;
+
+  top:
+    -170px;
+
+  right:
+    5%;
+
+  background:
+    rgba(
+      255,
+      218,
+      112,
+      0.15
+    );
+}
+
+
+.fincas__hero-decoracion--dos {
+  width:
+    270px;
+
+  height:
+    270px;
+
+  left:
+    -110px;
+
+  bottom:
+    -150px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.1
+    );
+}
+
+
+/* =========================================
+   CONTENIDO HERO
+========================================= */
+
+.fincas__hero-contenido {
+  position: relative;
+
+  z-index: 2;
+
+  width:
+    min(
+      1100px,
+      100%
+    );
+
+  margin:
+    0 auto;
+
+  text-align: center;
+}
+
+
+.fincas__eyebrow {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap:
+    7px;
+
+  margin-bottom:
+    15px;
+
+  padding:
+    7px 12px;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.26
+    );
+
+  border-radius:
+    999px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.1
+    );
+
+  backdrop-filter:
+    blur(10px);
+
+  font-size:
+    10px;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    1.5px;
+}
+
+
+.fincas__hero h1 {
+  max-width:
+    850px;
+
+  margin:
+    0 auto;
+
+  font-size:
+    clamp(
+      40px,
+      6vw,
+      70px
+    );
+
+  line-height:
+    1.02;
+
+  letter-spacing:
+    -1.6px;
+
+  text-wrap:
+    balance;
+}
+
+
+.fincas__hero h1 span {
+  display:
+    block;
+
+  margin-top:
+    7px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #fff2b8,
+      #ffd06a,
+      #ffc16b
+    );
+
+  -webkit-background-clip:
+    text;
+
+  background-clip:
+    text;
+
+  color:
+    transparent;
+}
+
+
+.fincas__hero p {
+  max-width:
+    670px;
+
+  margin:
+    22px auto 0;
+
+  font-size:
+    16px;
+
+  line-height:
+    1.75;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.86
+    );
+}
+
+
+/* =========================================
+   RESUMEN
+========================================= */
+
+.fincas__resumen {
+  margin-top:
+    30px;
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    12px;
+}
+
+
+.fincas__resumen > div {
+  min-width:
+    155px;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    auto auto;
+
+  grid-template-rows:
+    auto auto;
+
+  column-gap:
+    9px;
+
+  align-items:
+    center;
+
+  padding:
+    13px 17px;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.2
+    );
+
+  border-radius:
+    18px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.1
+    );
+
+  backdrop-filter:
+    blur(10px);
+}
+
+
+.fincas__resumen svg {
+  grid-row:
+    1 / 3;
+
+  color:
+    #ffdf83;
+}
+
+
+.fincas__resumen strong {
+  font-size:
+    19px;
+
+  line-height:
+    1;
+}
+
+
+.fincas__resumen span {
+  font-size:
+    11px;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.72
+    );
+}
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.fincas__contenido {
+  position: relative;
+
+  z-index: 3;
+
+  width:
+    min(
+      1320px,
+      calc(
+        100% - 40px
+      )
+    );
+
+  margin:
+    -62px auto 0;
+
+  padding-bottom:
+    85px;
+}
+
+
+/* =========================================
+   FILTROS
+========================================= */
+
+.fincas__filtros {
+  padding:
+    20px;
+
+  border:
+    1px solid
+    rgba(
+      69,
+      86,
+      60,
+      0.1
+    );
+
+  border-radius:
+    28px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.96
+    );
+
+  box-shadow:
+    0 20px 55px
+    rgba(
+      43,
+      58,
+      39,
+      0.13
+    );
+
+  backdrop-filter:
+    blur(14px);
+}
+
+
+/* =========================================
+   BUSCADOR
+========================================= */
+
+.fincas__buscador {
+  position:
+    relative;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    10px;
+
+  width:
+    100%;
+
+  min-height:
+    58px;
+
+  padding:
+    0 18px;
+
+  border:
+    2px solid
+    var(--fincas-gris-claro);
+
+  border-radius:
+    18px;
+
+  background:
+    #fffefa;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.fincas__buscador:focus-within {
+  border-color:
+    var(--fincas-naranja);
+
+  box-shadow:
+    0 0 0 5px
+    rgba(
+      233,
+      139,
+      47,
+      0.1
+    );
+
+  transform:
+    translateY(-1px);
+}
+
+
+.fincas__buscador > svg {
+  flex-shrink:
+    0;
+
+  color:
+    var(--fincas-verde);
+}
+
+
+.fincas__buscador input {
+  width:
+    100%;
+
+  border:
+    none;
+
+  outline:
+    none;
+
+  background:
+    transparent;
+
+  color:
+    #29372a;
+
+  font:
+    inherit;
+
+  font-size:
+    15px;
+}
+
+
+.fincas__buscador input::placeholder {
+  color:
+    #999d96;
+}
+
+
+.fincas__buscador-limpiar {
+  width:
+    33px;
+
+  height:
+    33px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  flex-shrink:
+    0;
+
+  border:
+    none;
+
+  border-radius:
+    50%;
+
+  background:
+    #f0f0ea;
+
+  color:
+    #686f68;
+
+  cursor:
+    pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.fincas__buscador-limpiar:hover {
+  transform:
+    rotate(6deg);
+
+  background:
+    var(--fincas-naranja);
+
+  color:
+    white;
+}
+
+
+/* =========================================
+   CONTROLES
+========================================= */
+
+.fincas__controles {
+  margin-top:
+    16px;
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    center;
+
+  gap:
+    16px;
+}
+
+
+/* =========================================
+   BOTÓN FILTROS MÓVIL
+========================================= */
+
+.fincas__filtros-movil-boton {
+  display:
+    none;
+
+  width:
+    100%;
+
+  margin-top:
+    12px;
+
+  padding:
+    11px 15px;
+
+  border:
+    1px solid
+    var(--fincas-gris-claro);
+
+  border-radius:
+    14px;
+
+  background:
+    #fffdf8;
+
+  color:
+    var(--fincas-verde-oscuro);
+
+  font:
+    inherit;
+
+  font-weight:
+    700;
+
+  cursor:
+    pointer;
+}
+
+
+/* =========================================
+   PILLS ESTADO
+========================================= */
+
+.fincas__filtro-estados {
+  display:
+    flex;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    9px;
+}
+
+
+.fincas__filtro-boton {
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    8px;
+
+  padding:
+    10px 15px;
+
+  border:
+    1px solid
+    #ddddD6;
+
+  border-radius:
+    999px;
+
+  background:
+    #fbfbf6;
+
+  color:
+    #596158;
+
+  font:
+    inherit;
+
+  font-size:
+    13px;
+
+  font-weight:
+    700;
+
+  cursor:
+    pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.fincas__filtro-boton span {
+  min-width:
+    23px;
+
+  height:
+    23px;
+
+  padding:
+    0 6px;
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border-radius:
+    999px;
+
+  background:
+    rgba(
+      0,
+      0,
+      0,
+      0.06
+    );
+
+  font-size:
+    10px;
+}
+
+
+.fincas__filtro-boton:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    var(--fincas-verde);
+
+  color:
+    var(--fincas-verde-oscuro);
+}
+
+
+.fincas__filtro-boton--activo {
+  border-color:
+    transparent;
+
+  background:
+    linear-gradient(
+      110deg,
+      #4c7e45,
+      #87a95c
+    );
+
+  color:
+    white;
+
+  box-shadow:
+    0 8px 20px
+    rgba(
+      72,
+      114,
+      62,
+      0.2
+    );
+}
+
+
+.fincas__filtro-boton--activo span {
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.18
+    );
+}
+
+
+.fincas__filtro-boton--oferta.fincas__filtro-boton--activo {
+  background:
+    linear-gradient(
+      110deg,
+      var(--fincas-naranja),
+      var(--fincas-amarillo)
+    );
+
+  color:
+    #46341e;
+
+  box-shadow:
+    0 8px 20px
+    rgba(
+      222,
+      132,
+      45,
+      0.2
+    );
+}
+
+
+/* =========================================
+   ORDEN
+========================================= */
+
+.fincas__orden {
+  min-width:
+    200px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    8px;
+
+  padding:
+    9px 13px;
+
+  border:
+    1px solid
+    var(--fincas-gris-claro);
+
+  border-radius:
+    14px;
+
+  background:
+    #fffdf9;
+
+  color:
+    var(--fincas-verde-oscuro);
+}
+
+
+.fincas__orden svg {
+  flex-shrink:
+    0;
+
+  color:
+    var(--fincas-naranja);
+}
+
+
+.fincas__orden select {
+  width:
+    100%;
+
+  border:
+    none;
+
+  outline:
+    none;
+
+  background:
+    transparent;
+
+  color:
+    #3c483d;
+
+  font:
+    inherit;
+
+  font-size:
+    13px;
+
+  font-weight:
+    700;
+
+  cursor:
+    pointer;
+}
+
+
+/* =========================================
+   RESULTADOS
+========================================= */
+
+.fincas__resultados-header {
+  margin-top:
+    30px;
+
+  margin-bottom:
+    18px;
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    center;
+
+  gap:
+    15px;
+}
+
+
+.fincas__resultados-header > div {
+  display:
+    flex;
+
+  align-items:
+    baseline;
+
+  gap:
+    7px;
+}
+
+
+.fincas__resultados-header > div > span {
+  font-size:
+    25px;
+
+  font-weight:
+    800;
+
+  color:
+    var(--fincas-verde-oscuro);
+}
+
+
+.fincas__resultados-header p {
+  margin:
+    0;
+
+  font-size:
+    13px;
+
+  color:
+    var(--fincas-gris);
+}
+
+
+.fincas__limpiar-filtros {
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    6px;
+
+  padding:
+    8px 12px;
+
+  border:
+    1px solid
+    #deded7;
+
+  border-radius:
+    999px;
+
+  background:
+    white;
+
+  color:
+    #757a73;
+
+  font:
+    inherit;
+
+  font-size:
+    12px;
+
+  font-weight:
+    700;
+
+  cursor:
+    pointer;
+
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.fincas__limpiar-filtros:hover {
+  border-color:
+    var(--fincas-naranja);
+
+  background:
+    #fff6eb;
+
+  color:
+    var(--fincas-naranja);
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.fincas__grid {
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  gap:
+    22px;
+
+  animation:
+    fincasGridEntrada
+    0.4s
+    ease-out;
+}
+
+
+@keyframes fincasGridEntrada {
+
+  from {
+    opacity:
+      0;
+
+    transform:
+      translateY(10px);
+  }
+
+  to {
+    opacity:
+      1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* =========================================
+   AYUDA PARA PROPERTY CARD
+========================================= */
+
+.fincas__grid .propertyCard {
+  height:
+    100%;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.fincas__grid .propertyCard:hover {
+  transform:
+    translateY(-6px);
+}
+
+
+/* =========================================
+   CARGANDO
+========================================= */
+
+.fincas__cargando {
+  min-height:
+    360px;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  text-align:
+    center;
+
+  padding:
+    50px 20px;
+}
+
+
+.fincas__loader {
+  width:
+    43px;
+
+  height:
+    43px;
+
+  border:
+    4px solid
+    #e7e8e1;
+
+  border-top-color:
+    var(--fincas-naranja);
+
+  border-radius:
+    50%;
+
+  animation:
+    fincasLoader
+    0.85s
+    linear
+    infinite;
+}
+
+
+@keyframes fincasLoader {
+
+  to {
+    transform:
+      rotate(360deg);
+  }
+
+}
+
+
+.fincas__cargando h2 {
+  margin:
+    17px 0 0;
+
+  font-size:
+    23px;
+
+  color:
+    var(--fincas-verde-oscuro);
+}
+
+
+.fincas__cargando p {
+  margin:
+    8px 0 0;
+
+  color:
+    var(--fincas-gris);
+}
+
+
+/* =========================================
+   ESTADO VACÍO
+========================================= */
+
+.fincas__estado-vacio {
+  min-height:
+    340px;
+
+  padding:
+    50px 25px;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  text-align:
+    center;
+
+  border:
+    2px dashed
+    #deded6;
+
+  border-radius:
+    26px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(
+        133,
+        169,
+        96,
+        0.08
+      ),
+      rgba(
+        237,
+        149,
+        58,
+        0.08
+      )
+    );
+}
+
+
+.fincas__estado-vacio-icono {
+  width:
+    58px;
+
+  height:
+    58px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border-radius:
+    18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--fincas-verde),
+      var(--fincas-naranja)
+    );
+
+  color:
+    white;
+
+  box-shadow:
+    0 12px 30px
+    rgba(
+      76,
+      99,
+      64,
+      0.18
+    );
+}
+
+
+.fincas__estado-vacio h2 {
+  margin:
+    18px 0 0;
+
+  font-size:
+    26px;
+
+  color:
+    var(--fincas-verde-oscuro);
+}
+
+
+.fincas__estado-vacio p {
+  max-width:
+    480px;
+
+  margin:
+    9px 0 0;
+
+  line-height:
+    1.7;
+
+  color:
+    var(--fincas-gris);
+}
+
+
+.fincas__estado-vacio > button {
+  margin-top:
+    18px;
+
+  padding:
+    11px 18px;
+
+  border:
+    none;
+
+  border-radius:
+    999px;
+
+  background:
+    linear-gradient(
+      110deg,
+      var(--fincas-verde),
+      var(--fincas-naranja)
+    );
+
+  color:
+    white;
+
+  font:
+    inherit;
+
+  font-weight:
+    800;
+
+  cursor:
+    pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.fincas__estado-vacio > button:hover {
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 12px 24px
+    rgba(
+      74,
+      83,
+      54,
+      0.2
+    );
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (
+  max-width: 1050px
+) {
+
+  .fincas__grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(
+          0,
+          1fr
+        )
+      );
+  }
+
+
+  .fincas__hero {
+    padding:
+      70px 20px 105px;
+  }
+
+}
+
+
+/* =========================================
+   MÓVIL / TABLET PEQUEÑA
+========================================= */
+
+@media (
+  max-width: 760px
+) {
+
+  .fincas__hero {
+    padding:
+      58px 18px 95px;
+  }
+
+
+  .fincas__hero h1 {
+    font-size:
+      clamp(
+        37px,
+        10vw,
+        55px
+      );
+  }
+
+
+  .fincas__hero p {
+    font-size:
+      14px;
+  }
+
+
+  .fincas__contenido {
+    width:
+      calc(
+        100% - 28px
+      );
+
+    margin-top:
+      -50px;
+  }
+
+
+  .fincas__filtros {
+    padding:
+      14px;
+
+    border-radius:
+      22px;
+  }
+
+
+  .fincas__filtros-movil-boton {
+    display:
+      flex;
+
+    align-items:
+      center;
+
+    justify-content:
+      center;
+
+    gap:
+      8px;
+  }
+
+
+  .fincas__controles {
+    display:
+      none;
+
+    margin-top:
+      13px;
+
+    flex-direction:
+      column;
+
+    align-items:
+      stretch;
+  }
+
+
+  .fincas__controles--visible {
+    display:
+      flex;
+  }
+
+
+  .fincas__filtro-estados {
+    width:
+      100%;
+  }
+
+
+  .fincas__filtro-boton {
+    flex:
+      1;
+
+    justify-content:
+      center;
+  }
+
+
+  .fincas__orden {
+    width:
+      100%;
+
+    min-width:
+      0;
+  }
+
+
+  .fincas__resultados-header {
+    margin-top:
+      22px;
+  }
+
+}
+
+
+/* =========================================
+   MÓVIL
+========================================= */
+
+@media (
+  max-width: 600px
+) {
+
+  .fincas__hero {
+    padding:
+      52px 16px 90px;
+  }
+
+
+  .fincas__eyebrow {
+    font-size:
+      9px;
+
+    letter-spacing:
+      1.2px;
+  }
+
+
+  .fincas__hero h1 {
+    font-size:
+      38px;
+  }
+
+
+  .fincas__resumen {
+    margin-top:
+      23px;
+
+    gap:
+      8px;
+  }
+
+
+  .fincas__resumen > div {
+    min-width:
+      135px;
+
+    padding:
+      11px 13px;
+  }
+
+
+  .fincas__buscador {
+    min-height:
+      53px;
+
+    padding:
+      0 14px;
+
+    border-radius:
+      15px;
+  }
+
+
+  .fincas__buscador input {
+    font-size:
+      13px;
+  }
+
+
+  .fincas__resultados-header {
+    align-items:
+      flex-start;
+
+    flex-direction:
+      column;
+  }
+
+
+  .fincas__grid {
+    grid-template-columns:
+      1fr;
+
+    gap:
+      17px;
+  }
+
+
+  .fincas__estado-vacio {
+    min-height:
+      300px;
+
+    padding:
+      38px 18px;
+  }
+
+}
+
+
+/* =========================================
+   MÓVILES MUY PEQUEÑOS
+========================================= */
+
+@media (
+  max-width: 420px
+) {
+
+  .fincas__contenido {
+    width:
+      calc(
+        100% - 20px
+      );
+  }
+
+
+  .fincas__hero h1 {
+    font-size:
+      34px;
+  }
+
+
+  .fincas__resumen {
+    flex-direction:
+      column;
+
+    align-items:
+      center;
+  }
+
+
+  .fincas__resumen > div {
+    width:
+      min(
+        240px,
+        100%
+      );
+  }
+
+
+  .fincas__filtro-estados {
+    flex-direction:
+      column;
+  }
+
+
+  .fincas__filtro-boton {
+    width:
+      100%;
+  }
+
+}
+
+
+/* =========================================
+   REDUCIR MOVIMIENTO
+========================================= */
+
+@media (
+  prefers-reduced-motion:
+  reduce
+) {
+
+  .fincas__grid,
+  .fincas__loader {
+    animation:
+      none;
+  }
+
+
+  .fincas__buscador,
+  .fincas__filtro-boton,
+  .fincas__limpiar-filtros,
+  .fincas__estado-vacio > button,
+  .fincas__grid .propertyCard {
+    transition:
+      none;
+  }
+
+}

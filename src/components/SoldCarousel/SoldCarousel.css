@@ -1,0 +1,503 @@
+/* ================================
+   SECCIÓN VENDIDAS
+================================ */
+
+.sold {
+  width: 100%;
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding:
+    82px 0 88px;
+
+  background:
+    linear-gradient(
+      120deg,
+      #fffdf8 0%,
+      #f8f5e8 55%,
+      #ffffff 100%
+    );
+}
+
+.sold__contenedor {
+  width: min(1380px, 92%);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    290px minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 50px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* ================================
+   DECORACIÓN
+================================ */
+
+.sold__fondoDecorativo {
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  left: -220px;
+  bottom: -200px;
+
+  border-radius:
+    48% 52% 64% 36% /
+    46% 40% 60% 54%;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(100, 158, 40, 0.18),
+      rgba(229, 174, 45, 0.12)
+    );
+
+  transform:
+    rotate(-18deg);
+}
+
+
+/* ================================
+   INTRODUCCIÓN
+================================ */
+
+.sold__introduccion {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+.sold__icono {
+  margin-bottom: 9px;
+
+  font-size: 42px;
+
+  line-height: 1;
+
+  color: #5f9829;
+}
+
+.sold__eyebrow {
+  margin-bottom: 10px;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  color: #c58a19;
+}
+
+.sold__titulo {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 38px;
+
+  line-height: 1.06;
+
+  font-weight: 500;
+
+  color: #362d24;
+}
+
+.sold__titulo span {
+  display: block;
+
+  font-style: italic;
+
+  color: #5a9d29;
+}
+
+.sold__descripcion {
+  margin:
+    17px 0 0;
+
+  max-width: 250px;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  color: #6a655e;
+}
+
+.sold__enlace {
+  margin-top: 24px;
+
+  min-height: 45px;
+
+  padding:
+    0 18px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  border:
+    1px solid #d49b25;
+
+  border-radius: 24px;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 650;
+
+  color: #68471d;
+
+  background:
+    rgba(255, 255, 255, 0.68);
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.sold__enlace:hover {
+  color: white;
+
+  background:
+    linear-gradient(
+      120deg,
+      #6ba72d,
+      #d59c25
+    );
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* ================================
+   ZONA CARRUSEL
+================================ */
+
+.sold__zonaCarrusel {
+  min-width: 0;
+
+  position: relative;
+}
+
+.sold__carrusel {
+  display: flex;
+
+  gap: 18px;
+
+  overflow-x: auto;
+
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+
+  padding:
+    10px 5px 18px;
+}
+
+.sold__carrusel::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* ================================
+   TARJETA
+================================ */
+
+.soldCard {
+  width: 260px;
+
+  min-width: 260px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(88, 76, 52, 0.12);
+
+  border-radius:
+    18px 18px 18px 5px;
+
+  background:
+    rgba(255, 255, 255, 0.94);
+
+  box-shadow:
+    0 10px 30px
+    rgba(63, 53, 35, 0.08);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.soldCard:hover {
+  transform:
+    translateY(-6px);
+
+  box-shadow:
+    0 16px 35px
+    rgba(63, 53, 35, 0.14);
+}
+
+.soldCard__imagenContenedor {
+  width: 100%;
+  height: 155px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.soldCard__imagen {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.5s ease;
+}
+
+.soldCard:hover
+.soldCard__imagen {
+  transform:
+    scale(1.06);
+}
+
+
+/* ================================
+   ESTADO
+================================ */
+
+.soldCard__estado {
+  position: absolute;
+
+  left: 12px;
+  bottom: 11px;
+
+  padding:
+    5px 9px;
+
+  border-radius: 16px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.7px;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      120deg,
+      #4b8e23,
+      #77ac2d
+    );
+
+  box-shadow:
+    0 3px 10px
+    rgba(35, 82, 20, 0.22);
+}
+
+
+/* ================================
+   CONTENIDO TARJETA
+================================ */
+
+.soldCard__contenido {
+  padding:
+    16px 16px 17px;
+}
+
+.soldCard__nombre {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 18px;
+
+  color: #342a21;
+}
+
+.soldCard__mensaje {
+  min-height: 60px;
+
+  margin:
+    10px 0 13px;
+
+  font-size: 13px;
+
+  font-style: italic;
+
+  line-height: 1.55;
+
+  color: #625d56;
+}
+
+.soldCard__ubicacion {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  font-size: 11px;
+
+  color: #776a5b;
+}
+
+.soldCard__ubicacion svg {
+  color: #c58a1a;
+}
+
+
+/* ================================
+   FLECHAS
+================================ */
+
+.sold__flecha {
+  width: 42px;
+  height: 42px;
+
+  position: absolute;
+
+  top: 50%;
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(157, 118, 42, 0.35);
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  color: #654a21;
+
+  background:
+    rgba(255, 255, 255, 0.96);
+
+  box-shadow:
+    0 6px 18px
+    rgba(0, 0, 0, 0.08);
+
+  transform:
+    translateY(-50%);
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.sold__flecha:hover {
+  color: white;
+
+  background:
+    linear-gradient(
+      120deg,
+      #5d9c29,
+      #d79c25
+    );
+
+  transform:
+    translateY(-50%)
+    scale(1.07);
+}
+
+.sold__flecha--izquierda {
+  left: -18px;
+}
+
+.sold__flecha--derecha {
+  right: -18px;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1050px) {
+
+  .sold__contenedor {
+    grid-template-columns: 1fr;
+
+    gap: 32px;
+  }
+
+  .sold__introduccion {
+    max-width: 560px;
+  }
+
+  .sold__descripcion {
+    max-width: 500px;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .sold {
+    padding:
+      58px 0 62px;
+  }
+
+  .sold__contenedor {
+    width: 90%;
+  }
+
+  .sold__titulo {
+    font-size: 33px;
+  }
+
+  .soldCard {
+    width: 235px;
+
+    min-width: 235px;
+  }
+
+  .sold__flecha {
+    display: none;
+  }
+
+}

@@ -1,0 +1,584 @@
+.admin-register {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+
+  padding: 40px 20px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f9f5e9 0%,
+      #fffdf7 45%,
+      #edf4e4 100%
+    );
+}
+
+
+/* =========================================
+   FORMAS DECORATIVAS
+   ========================================= */
+
+.admin-register__shape {
+  position: absolute;
+
+  border-radius: 999px;
+
+  filter: blur(4px);
+
+  pointer-events: none;
+}
+
+
+.admin-register__shape--one {
+  width: 430px;
+  height: 430px;
+
+  top: -190px;
+  left: -150px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(236, 191, 71, 0.35),
+      rgba(205, 132, 32, 0.15)
+    );
+}
+
+
+.admin-register__shape--two {
+  width: 520px;
+  height: 520px;
+
+  right: -210px;
+  bottom: -230px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(80, 131, 63, 0.28),
+      rgba(129, 163, 93, 0.12)
+    );
+}
+
+
+/* =========================================
+   TARJETA
+   ========================================= */
+
+.admin-register__card {
+  position: relative;
+  z-index: 2;
+
+  width: min(
+    100%,
+    560px
+  );
+
+  padding:
+    40px 40px 34px;
+
+  border:
+    1px solid
+    rgba(90, 99, 70, 0.12);
+
+  border-radius: 28px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.94
+    );
+
+  box-shadow:
+    0 26px 70px
+    rgba(
+      69,
+      75,
+      54,
+      0.13
+    );
+}
+
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+.admin-register__brand {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 16px;
+}
+
+
+.admin-register__logo-link {
+  display: inline-flex;
+}
+
+
+.admin-register__logo {
+  width: 160px;
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* =========================================
+   BADGE
+   ========================================= */
+
+.admin-register__badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  width: fit-content;
+
+  margin:
+    0 auto 17px;
+
+  padding:
+    8px 13px;
+
+  border-radius: 999px;
+
+  background:
+    #eef4e8;
+
+  color:
+    #4e753e;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   ENCABEZADO
+   ========================================= */
+
+.admin-register__header {
+  margin-bottom: 26px;
+
+  text-align: center;
+}
+
+
+.admin-register__header h1 {
+  margin: 0;
+
+  color:
+    #36442f;
+
+  font-size:
+    clamp(
+      28px,
+      5vw,
+      36px
+    );
+
+  line-height: 1.1;
+}
+
+
+.admin-register__header p {
+  max-width: 390px;
+
+  margin:
+    10px auto 0;
+
+  color:
+    #7a7e70;
+
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+
+/* =========================================
+   FORMULARIO
+   ========================================= */
+
+.admin-register__form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 17px;
+}
+
+
+.admin-register__field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+  min-width: 0;
+}
+
+
+.admin-register__label {
+  color:
+    #555c4e;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+.admin-register__input-wrapper {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  min-height: 52px;
+
+  padding:
+    0 15px;
+
+  border:
+    1px solid
+    #dfdfd6;
+
+  border-radius: 14px;
+
+  background:
+    #fcfcf8;
+
+  color:
+    #7d846f;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.admin-register__input-wrapper:focus-within {
+  border-color:
+    #71905f;
+
+  background:
+    #ffffff;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(
+      91,
+      131,
+      70,
+      0.1
+    );
+}
+
+
+.admin-register__input-wrapper input {
+  width: 100%;
+  min-width: 0;
+
+  border: 0;
+  outline: 0;
+
+  background:
+    transparent;
+
+  color:
+    #41463d;
+
+  font-size: 14px;
+}
+
+
+.admin-register__input-wrapper input::placeholder {
+  color:
+    #aaa99f;
+}
+
+
+/* =========================================
+   CONTRASEÑAS
+   ========================================= */
+
+.admin-register__passwords {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 14px;
+}
+
+
+/* =========================================
+   ERROR
+   ========================================= */
+
+.admin-register__error {
+  padding:
+    12px 14px;
+
+  border:
+    1px solid
+    rgba(
+      165,
+      70,
+      53,
+      0.1
+    );
+
+  border-radius: 12px;
+
+  background:
+    #fff0ec;
+
+  color:
+    #a54635;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   AVISO DE APROBACIÓN
+   ========================================= */
+
+.admin-register__notice {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 11px;
+
+  padding:
+    13px 14px;
+
+  border:
+    1px solid
+    #e8e1c9;
+
+  border-radius: 13px;
+
+  background:
+    #fffaf0;
+}
+
+
+.admin-register__notice-icon {
+  display: flex;
+
+  flex-shrink: 0;
+
+  margin-top: 1px;
+
+  color:
+    #a37a29;
+}
+
+
+.admin-register__notice p {
+  margin: 0;
+
+  color:
+    #7c7159;
+
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+
+/* =========================================
+   BOTÓN PRINCIPAL
+   ========================================= */
+
+.admin-register__submit {
+  width: 100%;
+
+  min-height: 52px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #567b45,
+      #365c33
+    );
+
+  color:
+    #ffffff;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 11px 24px
+    rgba(
+      55,
+      92,
+      51,
+      0.22
+    );
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+
+.admin-register__submit:hover:not(:disabled) {
+  transform:
+    translateY(-1px);
+
+  box-shadow:
+    0 14px 28px
+    rgba(
+      55,
+      92,
+      51,
+      0.28
+    );
+}
+
+
+.admin-register__submit:disabled {
+  opacity: 0.65;
+
+  cursor:
+    not-allowed;
+}
+
+
+/* =========================================
+   LOGIN
+   ========================================= */
+
+.admin-register__login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 6px;
+
+  margin-top: 23px;
+
+  font-size: 13px;
+}
+
+
+.admin-register__login p {
+  margin: 0;
+
+  color:
+    #81847a;
+}
+
+
+.admin-register__login a {
+  color:
+    #4c783e;
+
+  font-weight: 800;
+
+  text-decoration: none;
+}
+
+
+.admin-register__login a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   VOLVER
+   ========================================= */
+
+.admin-register__back {
+  display: block;
+
+  width: fit-content;
+
+  margin:
+    17px auto 0;
+
+  color:
+    #9a8564;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+
+.admin-register__back:hover {
+  color:
+    #745f43;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (
+  max-width: 600px
+) {
+
+  .admin-register {
+    padding:
+      24px 14px;
+  }
+
+
+  .admin-register__card {
+    padding:
+      32px 22px 28px;
+
+    border-radius:
+      22px;
+  }
+
+
+  .admin-register__logo {
+    width:
+      145px;
+  }
+
+
+  .admin-register__header h1 {
+    font-size:
+      29px;
+  }
+
+
+  .admin-register__passwords {
+    grid-template-columns:
+      1fr;
+  }
+
+}

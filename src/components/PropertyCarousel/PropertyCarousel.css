@@ -1,0 +1,311 @@
+/* ================================
+   PROPERTY CAROUSEL
+================================ */
+
+.propertyCarousel {
+  width: 100%;
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding:
+    78px 0 88px;
+
+  background:
+    #ffffff;
+}
+
+.propertyCarousel--ofertas {
+  background:
+    linear-gradient(
+      125deg,
+      #faf6e9 0%,
+      #fffdf8 55%,
+      #f5f8eb 100%
+    );
+}
+
+
+/* ================================
+   CONTENEDOR
+================================ */
+
+.propertyCarousel__contenedor {
+  width:
+    min(1380px, 92%);
+
+  margin: 0 auto;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* ================================
+   DECORACIÓN ORGÁNICA
+================================ */
+
+.propertyCarousel__decoracion {
+  width: 370px;
+  height: 250px;
+
+  position: absolute;
+
+  right: -180px;
+  top: -100px;
+
+  border-radius:
+    41% 59% 44% 56% /
+    57% 41% 59% 43%;
+
+  background:
+    linear-gradient(
+      130deg,
+      rgba(112, 163, 48, 0.11),
+      rgba(225, 165, 36, 0.12)
+    );
+
+  transform:
+    rotate(20deg);
+}
+
+
+/* ================================
+   ENCABEZADO
+================================ */
+
+.propertyCarousel__encabezado {
+  margin-bottom: 32px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 25px;
+}
+
+.propertyCarousel__eyebrow {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  color: #c28a20;
+}
+
+.propertyCarousel__titulo {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 38px;
+
+  line-height: 1;
+
+  font-weight: 500;
+
+  color: #372d23;
+}
+
+.propertyCarousel__titulo span {
+  margin-left: 8px;
+
+  font-style: italic;
+
+  color: #5e9c2c;
+}
+
+.propertyCarousel--ofertas
+.propertyCarousel__titulo span {
+  color: #ce8d1c;
+}
+
+.propertyCarousel__descripcion {
+  max-width: 570px;
+
+  margin:
+    13px 0 0;
+
+  font-size: 14px;
+
+  line-height: 1.65;
+
+  color: #746d64;
+}
+
+.propertyCarousel__verTodas {
+  margin-bottom: 3px;
+
+  padding:
+    10px 17px;
+
+  border:
+    1px solid
+    rgba(109, 147, 55, 0.35);
+
+  border-radius: 22px;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  color: #62882e;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.propertyCarousel__verTodas:hover {
+  color: white;
+
+  background: #659b30;
+}
+
+
+/* ================================
+   CARRUSEL
+================================ */
+
+.propertyCarousel__zona {
+  position: relative;
+}
+
+.propertyCarousel__lista {
+  padding:
+    9px 3px 20px;
+
+  display: flex;
+
+  gap: 22px;
+
+  overflow-x: auto;
+
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+
+  scroll-snap-type:
+    x proximity;
+}
+
+.propertyCarousel__lista
+.propertyCard {
+  scroll-snap-align: start;
+}
+
+.propertyCarousel__lista::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* ================================
+   FLECHAS
+================================ */
+
+.propertyCarousel__flecha {
+  width: 44px;
+  height: 44px;
+
+  position: absolute;
+
+  top: 50%;
+
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(123, 99, 49, 0.25);
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  color: #604c2b;
+
+  background:
+    rgba(255, 255, 255, 0.96);
+
+  box-shadow:
+    0 7px 18px
+    rgba(44, 36, 25, 0.09);
+
+  transform:
+    translateY(-50%);
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.propertyCarousel__flecha:hover {
+  color: white;
+
+  background:
+    linear-gradient(
+      120deg,
+      #5b982a,
+      #d09a26
+    );
+
+  transform:
+    translateY(-50%)
+    scale(1.07);
+}
+
+.propertyCarousel__flecha--izquierda {
+  left: -20px;
+}
+
+.propertyCarousel__flecha--derecha {
+  right: -20px;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 800px) {
+
+  .propertyCarousel {
+    padding:
+      60px 0 65px;
+  }
+
+  .propertyCarousel__encabezado {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .propertyCarousel__titulo {
+    font-size: 32px;
+  }
+
+  .propertyCarousel__flecha {
+    display: none;
+  }
+
+}

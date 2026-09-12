@@ -1,0 +1,295 @@
+/* ================================
+   PROPERTY CARD
+================================ */
+
+.propertyCard {
+  width: 290px;
+  min-width: 290px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(85, 72, 46, 0.13);
+
+  border-radius:
+    22px 22px 22px 7px;
+
+  background:
+    rgba(255, 255, 255, 0.96);
+
+  box-shadow:
+    0 10px 30px
+    rgba(55, 46, 31, 0.08);
+
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+.propertyCard:hover {
+  transform:
+    translateY(-7px);
+
+  box-shadow:
+    0 17px 38px
+    rgba(55, 46, 31, 0.14);
+}
+
+
+/* ================================
+   IMAGEN
+================================ */
+
+.propertyCard__imagenContenedor {
+  width: 100%;
+  height: 190px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.propertyCard__imagen {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.6s ease;
+}
+
+.propertyCard:hover
+.propertyCard__imagen {
+  transform:
+    scale(1.06);
+}
+
+
+/* ================================
+   ESTADO
+================================ */
+
+.propertyCard__estado {
+  position: absolute;
+
+  top: 14px;
+  left: 14px;
+
+  padding:
+    6px 11px;
+
+  border-radius: 20px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      120deg,
+      #4f9127,
+      #75ad31
+    );
+
+  box-shadow:
+    0 4px 12px
+    rgba(53, 99, 27, 0.25);
+}
+
+.propertyCard__estado--oferta {
+  background:
+    linear-gradient(
+      120deg,
+      #db8f1e,
+      #eab52d
+    );
+}
+
+
+/* ================================
+   CONTENIDO
+================================ */
+
+.propertyCard__contenido {
+  padding:
+    19px 19px 20px;
+}
+
+.propertyCard__ubicacion {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  margin-bottom: 9px;
+
+  font-size: 11px;
+
+  color: #7b6e5d;
+}
+
+.propertyCard__ubicacion svg {
+  color: #c98e1d;
+}
+
+.propertyCard__titulo {
+  margin: 0;
+
+  min-height: 48px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 20px;
+
+  line-height: 1.18;
+
+  font-weight: 500;
+
+  color: #352b21;
+}
+
+
+/* ================================
+   PRECIO
+================================ */
+
+.propertyCard__precio {
+  margin-top: 13px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.propertyCard__precio strong {
+  font-size: 19px;
+
+  color: #5c9429;
+}
+
+.propertyCard__precioAnterior {
+  font-size: 12px;
+
+  color: #9b948a;
+
+  text-decoration:
+    line-through;
+}
+
+
+/* ================================
+   DETALLES
+================================ */
+
+.propertyCard__detalles {
+  margin-top: 15px;
+
+  padding-top: 13px;
+
+  border-top:
+    1px solid
+    rgba(102, 87, 58, 0.1);
+}
+
+.propertyCard__detalles div {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  font-size: 12px;
+
+  color: #756b5e;
+}
+
+.propertyCard__detalles svg {
+  color: #7aa93b;
+}
+
+
+/* ================================
+   BOTÓN
+================================ */
+
+.propertyCard__boton {
+  margin-top: 17px;
+
+  min-height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  border:
+    1px solid
+    rgba(100, 148, 42, 0.35);
+
+  border-radius: 23px;
+
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  color: #567f27;
+
+  background:
+    linear-gradient(
+      90deg,
+      #fafdf6,
+      #fffaf1
+    );
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.propertyCard__boton:hover {
+  color: white;
+
+  background:
+    linear-gradient(
+      120deg,
+      #5f9d2d,
+      #8ab236,
+      #d19a28
+    );
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 700px) {
+
+  .propertyCard {
+    width: 250px;
+    min-width: 250px;
+  }
+
+  .propertyCard__imagenContenedor {
+    height: 165px;
+  }
+
+}

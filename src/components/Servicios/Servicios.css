@@ -1,0 +1,1678 @@
+/* =========================================
+   SECCIÓN
+========================================= */
+
+.services {
+  position: relative;
+
+  width: 100%;
+
+  padding:
+    85px 20px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fffdf8 0%,
+      #fff8eb 42%,
+      #f6f8ed 100%
+    );
+
+  color:
+    #29392b;
+}
+
+
+/* =========================================
+   CONTENEDOR
+========================================= */
+
+.services__container {
+  position: relative;
+
+  z-index: 2;
+
+  width:
+    min(
+      1180px,
+      100%
+    );
+
+  margin:
+    0 auto;
+}
+
+
+/* =========================================
+   FORMAS DECORATIVAS
+========================================= */
+
+.services__shape {
+  position: absolute;
+
+  pointer-events: none;
+
+  border-radius: 50%;
+
+  filter:
+    blur(2px);
+}
+
+
+.services__shape--orange {
+  width:
+    330px;
+
+  height:
+    330px;
+
+  right:
+    -180px;
+
+  top:
+    110px;
+
+  background:
+    rgba(
+      236,
+      139,
+      45,
+      0.12
+    );
+}
+
+
+.services__shape--green {
+  width:
+    260px;
+
+  height:
+    260px;
+
+  left:
+    -150px;
+
+  bottom:
+    290px;
+
+  background:
+    rgba(
+      91,
+      137,
+      72,
+      0.11
+    );
+}
+
+
+.services__shape--yellow {
+  width:
+    110px;
+
+  height:
+    110px;
+
+  left:
+    10%;
+
+  top:
+    70px;
+
+  background:
+    rgba(
+      245,
+      194,
+      68,
+      0.13
+    );
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.services__header {
+  margin-bottom:
+    58px;
+}
+
+
+.services__eyebrow {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap:
+    7px;
+
+  margin-bottom:
+    18px;
+
+  padding:
+    7px 12px;
+
+  border-radius:
+    999px;
+
+  background:
+    #fff0d7;
+
+  color:
+    #bb6b27;
+
+  font-size:
+    10px;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    1.7px;
+}
+
+
+.services__header-grid {
+  display:
+    grid;
+
+  grid-template-columns:
+    1.3fr 0.7fr;
+
+  align-items:
+    end;
+
+  gap:
+    55px;
+}
+
+
+.services__header h2 {
+  margin:
+    0;
+
+  max-width:
+    760px;
+
+  color:
+    #294b31;
+
+  font-size:
+    clamp(
+      37px,
+      5vw,
+      62px
+    );
+
+  line-height:
+    1.02;
+
+  letter-spacing:
+    -1.6px;
+
+  text-wrap:
+    balance;
+}
+
+
+.services__header h2 span {
+  display:
+    block;
+
+  margin-top:
+    5px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #d4772a,
+      #eda737,
+      #749849
+    );
+
+  -webkit-background-clip:
+    text;
+
+  background-clip:
+    text;
+
+  color:
+    transparent;
+}
+
+
+.services__intro p {
+  margin:
+    0;
+
+  color:
+    #687168;
+
+  font-size:
+    14px;
+
+  line-height:
+    1.75;
+}
+
+
+.services__intro-tag {
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    8px;
+
+  margin-top:
+    18px;
+
+  color:
+    #507843;
+
+  font-size:
+    12px;
+
+  font-weight:
+    800;
+}
+
+
+/* =========================================
+   TARJETAS
+========================================= */
+
+.service-card {
+  position: relative;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    0.8fr 1.2fr;
+
+  min-height:
+    430px;
+
+  overflow: hidden;
+
+  border:
+    2px solid
+    #e1e0d8;
+
+  border-radius:
+    34px;
+
+  background:
+    white;
+
+  box-shadow:
+    0 20px 55px
+    rgba(
+      52,
+      65,
+      45,
+      0.1
+    );
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+.service-card:hover {
+  transform:
+    translateY(-7px);
+
+  border-color:
+    #e78a31;
+
+  box-shadow:
+    0 28px 65px
+    rgba(
+      180,
+      108,
+      40,
+      0.15
+    );
+}
+
+
+/* =========================================
+   VISUAL
+========================================= */
+
+.service-card__visual {
+  position: relative;
+
+  min-height:
+    430px;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #527d47 0%,
+      #8ca458 52%,
+      #d69b43 100%
+    );
+
+  color:
+    white;
+}
+
+
+.service-card--credit
+.service-card__visual {
+  background:
+    linear-gradient(
+      145deg,
+      #eda23b 0%,
+      #c87a35 48%,
+      #725039 100%
+    );
+}
+
+
+.service-card__visual::before {
+  content:
+    "";
+
+  position: absolute;
+
+  width:
+    260px;
+
+  height:
+    260px;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.16
+    );
+
+  border-radius:
+    50%;
+}
+
+
+.service-card__visual::after {
+  content:
+    "";
+
+  position: absolute;
+
+  width:
+    175px;
+
+  height:
+    175px;
+
+  border:
+    1px dashed
+    rgba(
+      255,
+      255,
+      255,
+      0.24
+    );
+
+  border-radius:
+    50%;
+
+  animation:
+    serviceCircleRotate
+    20s
+    linear
+    infinite;
+}
+
+
+@keyframes serviceCircleRotate {
+
+  to {
+    transform:
+      rotate(360deg);
+  }
+
+}
+
+
+/* =========================================
+   NÚMERO
+========================================= */
+
+.service-card__number {
+  position: absolute;
+
+  top:
+    24px;
+
+  left:
+    27px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    53px;
+
+  font-style:
+    italic;
+
+  font-weight:
+    700;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.17
+    );
+}
+
+
+/* =========================================
+   ICONO GRANDE
+========================================= */
+
+.service-card__icon-main {
+  position: relative;
+
+  z-index: 3;
+
+  width:
+    112px;
+
+  height:
+    112px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border:
+    2px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.48
+    );
+
+  border-radius:
+    32px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.14
+    );
+
+  color:
+    white;
+
+  box-shadow:
+    0 18px 40px
+    rgba(
+      42,
+      59,
+      35,
+      0.15
+    );
+
+  backdrop-filter:
+    blur(12px);
+
+  transform:
+    rotate(-4deg);
+
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease;
+}
+
+
+.service-card:hover
+.service-card__icon-main {
+  transform:
+    rotate(3deg)
+    scale(1.06);
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.2
+    );
+}
+
+
+.service-card__icon-main--credit {
+  transform:
+    rotate(4deg);
+}
+
+
+.service-card:hover
+.service-card__icon-main--credit {
+  transform:
+    rotate(-3deg)
+    scale(1.06);
+}
+
+
+/* =========================================
+   ICONOS FLOTANTES
+========================================= */
+
+.service-card__floating {
+  position: absolute;
+
+  z-index: 4;
+
+  width:
+    46px;
+
+  height:
+    46px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border:
+    2px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.6
+    );
+
+  border-radius:
+    15px;
+
+  background:
+    #fffdf8;
+
+  color:
+    #568047;
+
+  box-shadow:
+    0 10px 28px
+    rgba(
+      47,
+      61,
+      41,
+      0.17
+    );
+
+  animation:
+    serviceFloating
+    3.8s
+    ease-in-out
+    infinite;
+}
+
+
+.service-card__floating--one {
+  top:
+    28%;
+
+  right:
+    19%;
+}
+
+
+.service-card__floating--two {
+  left:
+    19%;
+
+  bottom:
+    29%;
+
+  animation-delay:
+    -1.5s;
+
+  color:
+    #d57d2c;
+}
+
+
+.service-card__floating--credit-one {
+  top:
+    27%;
+
+  right:
+    18%;
+
+  color:
+    #d57a29;
+}
+
+
+.service-card__floating--credit-two {
+  left:
+    19%;
+
+  bottom:
+    29%;
+
+  color:
+    #5f824c;
+
+  animation-delay:
+    -1.4s;
+}
+
+
+@keyframes serviceFloating {
+
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(0deg);
+  }
+
+  50% {
+    transform:
+      translateY(-8px)
+      rotate(3deg);
+  }
+
+}
+
+
+/* =========================================
+   TEXTO DEL VISUAL
+========================================= */
+
+.service-card__visual-text {
+  position: absolute;
+
+  z-index: 4;
+
+  left:
+    28px;
+
+  right:
+    28px;
+
+  bottom:
+    25px;
+
+  display:
+    flex;
+
+  align-items:
+    flex-end;
+
+  justify-content:
+    space-between;
+
+  gap:
+    20px;
+}
+
+
+.service-card__visual-text span {
+  font-size:
+    9px;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    1.8px;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.72
+    );
+}
+
+
+.service-card__visual-text strong {
+  max-width:
+    130px;
+
+  text-align:
+    right;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    17px;
+
+  font-style:
+    italic;
+
+  line-height:
+    1.2;
+}
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.service-card__content {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  justify-content:
+    center;
+
+  padding:
+    48px 52px;
+}
+
+
+.service-card__label {
+  width:
+    fit-content;
+
+  padding:
+    6px 10px;
+
+  margin-bottom:
+    14px;
+
+  border-radius:
+    999px;
+
+  background:
+    #eaf3e4;
+
+  color:
+    #5b7f4b;
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    1.6px;
+}
+
+
+.service-card__label--orange {
+  background:
+    #fff0db;
+
+  color:
+    #c5742d;
+}
+
+
+.service-card__content h3 {
+  margin:
+    0;
+
+  color:
+    #294631;
+
+  font-size:
+    clamp(
+      32px,
+      4vw,
+      48px
+    );
+
+  line-height:
+    1;
+
+  letter-spacing:
+    -1px;
+}
+
+
+.service-card__content h3 span {
+  display:
+    block;
+
+  margin-top:
+    5px;
+
+  color:
+    #d17a2d;
+}
+
+
+.service-card__description {
+  max-width:
+    590px;
+
+  margin:
+    18px 0 0;
+
+  color:
+    #6b736b;
+
+  font-size:
+    14px;
+
+  line-height:
+    1.75;
+}
+
+
+/* =========================================
+   BENEFICIOS
+========================================= */
+
+.service-card__benefits {
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  gap:
+    10px;
+
+  margin-top:
+    25px;
+}
+
+
+.service-card__benefits > div {
+  padding:
+    15px;
+
+  border:
+    1px solid
+    #e4e4de;
+
+  border-radius:
+    16px;
+
+  background:
+    #fafbf6;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.service-card__benefits > div:hover {
+  transform:
+    translateY(-4px);
+
+  border-color:
+    #e28a39;
+
+  background:
+    #fff9ef;
+}
+
+
+.service-card__check {
+  width:
+    27px;
+
+  height:
+    27px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  margin-bottom:
+    9px;
+
+  border-radius:
+    9px;
+
+  background:
+    #e6f1df;
+
+  color:
+    #548047;
+}
+
+
+.service-card__benefits--credit
+.service-card__check {
+  background:
+    #fff0dc;
+
+  color:
+    #d0782b;
+}
+
+
+.service-card__benefits p {
+  margin:
+    0;
+
+  color:
+    #596359;
+
+  font-size:
+    11px;
+
+  line-height:
+    1.55;
+}
+
+
+/* =========================================
+   NOTA CRÉDITO
+========================================= */
+
+.service-card__credit-note {
+  display:
+    flex;
+
+  align-items:
+    flex-start;
+
+  gap:
+    10px;
+
+  margin-top:
+    16px;
+
+  padding:
+    12px 15px;
+
+  border-left:
+    3px solid
+    #e2983c;
+
+  border-radius:
+    0 12px 12px 0;
+
+  background:
+    #fff9ee;
+
+  color:
+    #846944;
+}
+
+
+.service-card__credit-note svg {
+  flex-shrink:
+    0;
+
+  margin-top:
+    1px;
+}
+
+
+.service-card__credit-note p {
+  margin:
+    0;
+
+  font-size:
+    10px;
+
+  line-height:
+    1.55;
+}
+
+
+/* =========================================
+   BOTONES
+========================================= */
+
+.service-card__button {
+  width:
+    fit-content;
+
+  margin-top:
+    24px;
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    9px;
+
+  padding:
+    12px 18px;
+
+  border:
+    none;
+
+  border-radius:
+    999px;
+
+  background:
+    linear-gradient(
+      100deg,
+      #4d7a45,
+      #75994f
+    );
+
+  color:
+    white;
+
+  font:
+    inherit;
+
+  font-size:
+    12px;
+
+  font-weight:
+    800;
+
+  cursor:
+    pointer;
+
+  box-shadow:
+    0 10px 25px
+    rgba(
+      75,
+      111,
+      65,
+      0.2
+    );
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.service-card__button:hover {
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 15px 30px
+    rgba(
+      102,
+      111,
+      59,
+      0.25
+    );
+
+  background:
+    linear-gradient(
+      100deg,
+      #638a49,
+      #e19138
+    );
+}
+
+
+.service-card__button svg:last-child {
+  transition:
+    transform 0.25s ease;
+}
+
+
+.service-card__button:hover
+svg:last-child {
+  transform:
+    translateX(4px);
+}
+
+
+.service-card__button--orange {
+  background:
+    linear-gradient(
+      100deg,
+      #db7c2d,
+      #efa33c
+    );
+}
+
+
+/* =========================================
+   DIVISOR
+========================================= */
+
+.services__divider {
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr auto 1fr;
+
+  align-items:
+    center;
+
+  gap:
+    14px;
+
+  width:
+    70%;
+
+  margin:
+    25px auto;
+}
+
+
+.services__divider > span {
+  height:
+    1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #d7d8cf,
+      transparent
+    );
+}
+
+
+.services__divider > div {
+  width:
+    39px;
+
+  height:
+    39px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border:
+    1px solid
+    #e0e0d9;
+
+  border-radius:
+    50%;
+
+  background:
+    white;
+
+  color:
+    #dc842f;
+}
+
+
+/* =========================================
+   SEGUNDA TARJETA
+========================================= */
+
+.service-card--credit {
+  grid-template-columns:
+    1.2fr 0.8fr;
+}
+
+
+/* =========================================
+   CIERRE
+========================================= */
+
+.services__footer {
+  margin-top:
+    55px;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    auto 1fr auto;
+
+  align-items:
+    center;
+
+  gap:
+    22px;
+
+  padding:
+    25px 30px;
+
+  border:
+    2px solid
+    #e3e2da;
+
+  border-radius:
+    24px;
+
+  background:
+    linear-gradient(
+      110deg,
+      #ffffff,
+      #fff9ed
+    );
+
+  box-shadow:
+    0 13px 35px
+    rgba(
+      49,
+      62,
+      44,
+      0.08
+    );
+}
+
+
+.services__footer-icon {
+  width:
+    58px;
+
+  height:
+    58px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border-radius:
+    18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #5b864d,
+      #ec9c39
+    );
+
+  color:
+    white;
+}
+
+
+.services__footer span {
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    1.6px;
+
+  color:
+    #d0802f;
+}
+
+
+.services__footer h3 {
+  margin:
+    3px 0 0;
+
+  color:
+    #304832;
+
+  font-size:
+    21px;
+}
+
+
+.services__footer p {
+  margin:
+    5px 0 0;
+
+  max-width:
+    600px;
+
+  color:
+    #747a72;
+
+  font-size:
+    12px;
+
+  line-height:
+    1.55;
+}
+
+
+.services__footer button {
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    8px;
+
+  padding:
+    11px 17px;
+
+  border:
+    2px solid
+    #4f7c48;
+
+  border-radius:
+    999px;
+
+  background:
+    transparent;
+
+  color:
+    #426d3f;
+
+  font:
+    inherit;
+
+  font-size:
+    11px;
+
+  font-weight:
+    800;
+
+  cursor:
+    pointer;
+
+  white-space:
+    nowrap;
+
+  transition:
+    all
+    0.25s
+    ease;
+}
+
+
+.services__footer button:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    #e18834;
+
+  background:
+    #e18834;
+
+  color:
+    white;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (
+  max-width: 950px
+) {
+
+  .services__header-grid {
+    grid-template-columns:
+      1fr;
+
+    gap:
+      20px;
+  }
+
+
+  .services__intro {
+    max-width:
+      650px;
+  }
+
+
+  .service-card,
+  .service-card--credit {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .service-card__visual {
+    min-height:
+      300px;
+  }
+
+
+  .service-card--credit
+  .service-card__content {
+    order:
+      2;
+  }
+
+
+  .service-card--credit
+  .service-card__visual {
+    order:
+      1;
+  }
+
+
+  .services__footer {
+    grid-template-columns:
+      auto 1fr;
+  }
+
+
+  .services__footer button {
+    grid-column:
+      1 / 3;
+
+    justify-self:
+      start;
+  }
+
+}
+
+
+/* =========================================
+   MÓVIL
+========================================= */
+
+@media (
+  max-width: 650px
+) {
+
+  .services {
+    padding:
+      60px 14px;
+  }
+
+
+  .services__header {
+    margin-bottom:
+      38px;
+  }
+
+
+  .services__header h2 {
+    font-size:
+      37px;
+  }
+
+
+  .service-card {
+    border-radius:
+      25px;
+  }
+
+
+  .service-card__visual {
+    min-height:
+      260px;
+  }
+
+
+  .service-card__icon-main {
+    width:
+      92px;
+
+    height:
+      92px;
+  }
+
+
+  .service-card__content {
+    padding:
+      32px 22px;
+  }
+
+
+  .service-card__content h3 {
+    font-size:
+      34px;
+  }
+
+
+  .service-card__benefits {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .service-card__benefits > div {
+    display:
+      grid;
+
+    grid-template-columns:
+      auto 1fr;
+
+    align-items:
+      center;
+
+    gap:
+      10px;
+  }
+
+
+  .service-card__check {
+    margin-bottom:
+      0;
+  }
+
+
+  .service-card__button {
+    width:
+      100%;
+  }
+
+
+  .services__divider {
+    width:
+      90%;
+
+    margin:
+      19px auto;
+  }
+
+
+  .services__footer {
+    grid-template-columns:
+      1fr;
+
+    padding:
+      23px 20px;
+  }
+
+
+  .services__footer button {
+    grid-column:
+      auto;
+
+    width:
+      100%;
+
+    justify-content:
+      center;
+  }
+
+}
+
+
+/* =========================================
+   REDUCIR MOVIMIENTO
+========================================= */
+
+@media (
+  prefers-reduced-motion:
+  reduce
+) {
+
+  .service-card__visual::after,
+  .service-card__floating {
+    animation:
+      none;
+  }
+
+
+  .service-card,
+  .service-card__icon-main,
+  .service-card__benefits > div,
+  .service-card__button {
+    transition:
+      none;
+  }
+
+}

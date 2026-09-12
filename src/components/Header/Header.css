@@ -1,0 +1,454 @@
+/* ================================
+   HEADER
+================================ */
+
+.header {
+  width: 100%;
+  height: 88px;
+
+  position: relative;
+  z-index: 1000;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ffffff 0%,
+      #fffdf8 52%,
+      #f9f5ea 100%
+    );
+
+  border:
+    1px solid #b8b8b8;
+
+  border-bottom:
+    5px solid #a8a8a8;
+
+  border-radius:
+    0 0 0 50px;
+
+  box-shadow:
+    0 5px 18px
+    rgba(50, 47, 31, 0.08);
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.header:hover {
+  border-color: #e5a72b;
+
+  box-shadow:
+    0 6px 22px
+    rgba(229, 167, 43, 0.16);
+}
+
+
+/* ================================
+   HOVER DEL HEADER
+================================ */
+
+.header:hover {
+  border-color: #e7a629;
+
+  box-shadow:
+    0 6px 28px
+    rgba(231, 166, 41, 0.14);
+}
+
+.header--transparente {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.96),
+      rgba(255, 255, 255, 0.85)
+    );
+
+  backdrop-filter: blur(12px);
+}
+
+.header__contenedor {
+  width: min(1380px, 92%);
+  height: 100%;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+
+/* ================================
+   LOGO
+================================ */
+
+.header__logo {
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  text-decoration: none;
+}
+
+.header__logoImagen {
+  display: block;
+
+  width: 190px;
+  height: 70px;
+
+  object-fit: contain;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.header__logo:hover .header__logoImagen {
+  transform: scale(1.02);
+  opacity: 0.94;
+}
+
+
+/* ================================
+   NAVEGACIÓN
+================================ */
+
+.header__nav {
+  display: flex;
+  align-items: center;
+
+  gap: 33px;
+}
+
+.nav__link {
+  position: relative;
+
+  padding: 34px 0 30px;
+
+  color: #403a2d;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    color 0.25s ease;
+}
+
+.nav__link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 21px;
+
+  width: 0;
+  height: 2px;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #edb22b,
+      #68ad24
+    );
+
+  transform: translateX(-50%);
+
+  transition:
+    width 0.25s ease;
+}
+
+.nav__link:hover {
+  color: #529b1d;
+}
+
+.nav__link:hover::after,
+.nav__link--activo::after {
+  width: 100%;
+}
+
+.nav__link--activo {
+  color: #529b1d;
+}
+
+
+/* ================================
+   ACCIONES
+================================ */
+
+.header__acciones {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  flex-shrink: 0;
+}
+
+.header__telefono {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #55452e;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.header__telefono svg {
+  color: #71aa27;
+
+  transition:
+    transform 0.2s ease;
+}
+
+.header__telefono:hover {
+  color: #529b1d;
+}
+
+.header__telefono:hover svg {
+  transform: scale(1.08);
+}
+
+
+/* ================================
+   BOTÓN MENÚ
+================================ */
+
+.header__menuBoton {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  color: #4f3826;
+
+  background: #f7f3e8;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.header__menuBoton:hover {
+  background: #eee7d5;
+}
+
+.header__menuBoton:active {
+  transform: scale(0.95);
+}
+
+
+/* ================================
+   OVERLAY
+================================ */
+
+.header__overlay {
+  display: none;
+}
+
+
+/* ================================
+   RESPONSIVE TABLET
+================================ */
+
+@media (max-width: 1100px) {
+
+  .header__nav {
+    gap: 22px;
+  }
+
+  .header__telefono span {
+    display: none;
+  }
+
+}
+
+
+/* ================================
+   RESPONSIVE MENÚ MÓVIL
+================================ */
+
+@media (max-width: 900px) {
+
+  .header {
+    height: 76px;
+  }
+
+  .header__contenedor {
+    width: 94%;
+  }
+
+  .header__logoImagen {
+    width: 165px;
+    height: 60px;
+  }
+
+  .header__nav {
+    position: fixed;
+
+    top: 76px;
+    right: 0;
+
+    width: min(340px, 86vw);
+    height: calc(100vh - 76px);
+
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 0;
+
+    overflow-y: auto;
+
+    background:
+      linear-gradient(
+        160deg,
+        #ffffff,
+        #fffbed
+      );
+
+    box-shadow:
+      -10px 20px 35px rgba(0, 0, 0, 0.12);
+
+    transform: translateX(110%);
+
+    transition:
+      transform 0.3s ease;
+
+    z-index: 1001;
+  }
+
+  .header__nav--abierto {
+    transform: translateX(0);
+  }
+
+  .nav__link {
+    width: 100%;
+
+    padding: 19px 8px;
+
+    border-bottom:
+      1px solid rgba(77, 67, 47, 0.09);
+
+    font-size: 15px;
+  }
+
+  .nav__link::after {
+    display: none;
+  }
+
+  .header__menuBoton {
+    display: flex;
+  }
+
+  .header__overlay {
+    display: block;
+
+    position: fixed;
+
+    inset: 76px 0 0;
+
+    z-index: 900;
+
+    background:
+      rgba(25, 29, 17, 0.38);
+
+    backdrop-filter: blur(2px);
+  }
+
+}
+
+
+/* ================================
+   RESPONSIVE CELULAR
+================================ */
+
+@media (max-width: 600px) {
+
+  .header {
+    height: 70px;
+  }
+
+  .header__contenedor {
+    width: 94%;
+    gap: 12px;
+  }
+
+  .header__logoImagen {
+    width: 145px;
+    height: 54px;
+  }
+
+  .header__telefono {
+    display: none;
+  }
+
+  .header__nav {
+    top: 70px;
+
+    height: calc(100vh - 70px);
+
+    width: min(320px, 88vw);
+
+    padding: 24px;
+  }
+
+  .header__overlay {
+    inset: 70px 0 0;
+  }
+
+}
+
+
+/* ================================
+   CELULARES PEQUEÑOS
+================================ */
+
+@media (max-width: 380px) {
+
+  .header__logoImagen {
+    width: 130px;
+    height: 50px;
+  }
+
+  .header__menuBoton {
+    width: 40px;
+    height: 40px;
+  }
+
+}

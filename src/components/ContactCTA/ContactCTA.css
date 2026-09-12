@@ -1,0 +1,1313 @@
+/* =========================================
+   VARIABLES
+========================================= */
+
+.contactCTA {
+  --contact-verde: #456d3d;
+  --contact-verde-claro: #7f9d4f;
+  --contact-verde-oscuro: #173b29;
+
+  --contact-cafe: #755139;
+  --contact-naranja: #e49337;
+  --contact-amarillo: #f4ce63;
+
+  --contact-blanco: #ffffff;
+
+  position: relative;
+
+  width: 100%;
+
+  min-height: 570px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  background:
+    var(--contact-verde-oscuro);
+}
+
+
+/* =========================================
+   CARRUSEL
+========================================= */
+
+.contactCTA__carousel {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: -4;
+
+  overflow: hidden;
+
+  background:
+    #233f2b;
+}
+
+
+/* =========================================
+   SLIDES
+========================================= */
+
+.contactCTA__slide {
+  position: absolute;
+
+  inset: -4%;
+
+  width: 108%;
+  height: 108%;
+
+  opacity: 0;
+
+  transform:
+    translateX(-7%)
+    scale(1.04);
+
+  animation:
+    contactCarousel
+    24s
+    infinite
+    ease-in-out;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+.contactCTA__slide--1 {
+  animation-delay: 0s;
+}
+
+
+.contactCTA__slide--2 {
+  animation-delay: 6s;
+}
+
+
+.contactCTA__slide--3 {
+  animation-delay: 12s;
+}
+
+
+.contactCTA__slide--4 {
+  animation-delay: 18s;
+}
+
+
+.contactCTA__slide img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  filter:
+    saturate(1.05)
+    contrast(1.02);
+}
+
+
+/* =========================================
+   ANIMACIÓN CARRUSEL
+
+   Empieza a la izquierda
+   ↓
+   entra
+   ↓
+   permanece
+   ↓
+   se desplaza a la derecha
+   ↓
+   desaparece
+========================================= */
+
+@keyframes contactCarousel {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateX(-7%)
+      scale(1.04);
+  }
+
+
+  5% {
+    opacity: 1;
+
+    transform:
+      translateX(-2%)
+      scale(1.035);
+  }
+
+
+  20% {
+    opacity: 1;
+
+    transform:
+      translateX(2%)
+      scale(1.025);
+  }
+
+
+  26% {
+    opacity: 0;
+
+    transform:
+      translateX(8%)
+      scale(1.02);
+  }
+
+
+  100% {
+    opacity: 0;
+
+    transform:
+      translateX(8%)
+      scale(1.02);
+  }
+
+}
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.contactCTA__overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: -3;
+
+  background:
+    linear-gradient(
+      100deg,
+
+      rgba(
+        19,
+        54,
+        37,
+        0.94
+      )
+      0%,
+
+      rgba(
+        35,
+        80,
+        43,
+        0.88
+      )
+      35%,
+
+      rgba(
+        104,
+        118,
+        47,
+        0.68
+      )
+      68%,
+
+      rgba(
+        218,
+        167,
+        59,
+        0.58
+      )
+      100%
+    );
+}
+
+
+/* =========================================
+   SOMBRA INFERIOR
+========================================= */
+
+.contactCTA::after {
+  content: "";
+
+  position: absolute;
+
+  z-index: -2;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 42%,
+      rgba(
+        31,
+        45,
+        29,
+        0.3
+      )
+      100%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   FORMAS DECORATIVAS
+========================================= */
+
+.contactCTA__decoracion {
+  position: absolute;
+
+  z-index: -1;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+.contactCTA__decoracion--uno {
+  width: 330px;
+  height: 330px;
+
+  top: -190px;
+  right: 20%;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.15
+    );
+
+  background:
+    rgba(
+      244,
+      206,
+      99,
+      0.09
+    );
+}
+
+
+.contactCTA__decoracion--dos {
+  width: 250px;
+  height: 250px;
+
+  bottom: -160px;
+  left: -75px;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.12
+    );
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.07
+    );
+}
+
+
+/* =========================================
+   CONTENEDOR
+========================================= */
+
+.contactCTA__contenedor {
+  position: relative;
+
+  z-index: 5;
+
+  width:
+    min(
+      1180px,
+      calc(100% - 40px)
+    );
+
+  margin: 0 auto;
+
+  padding:
+    70px 0;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.35fr)
+    minmax(260px, 0.65fr);
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.contactCTA__contenido {
+  max-width: 720px;
+}
+
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.contactCTA__eyebrow {
+  width: fit-content;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 16px;
+
+  padding:
+    7px 12px;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.3
+    );
+
+  border-radius: 999px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.11
+    );
+
+  color:
+    #ffe396;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  backdrop-filter:
+    blur(10px);
+
+  box-shadow:
+    0 8px 25px
+    rgba(
+      0,
+      0,
+      0,
+      0.08
+    );
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.contactCTA__titulo {
+  margin: 0;
+
+  max-width: 720px;
+
+  color: white;
+
+  font-size:
+    clamp(
+      38px,
+      5.3vw,
+      66px
+    );
+
+  line-height: 1;
+
+  letter-spacing: -1.8px;
+
+  text-wrap: balance;
+
+  animation:
+    contactTextEntrance
+    0.9s
+    ease-out
+    both;
+}
+
+
+.contactCTA__titulo span {
+  display: block;
+
+  margin-top: 6px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-style: italic;
+
+  font-weight: 600;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ffe698,
+      #ffc85d,
+      #efa444
+    );
+
+  background-clip: text;
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+}
+
+
+@keyframes contactTextEntrance {
+
+  from {
+    opacity: 0;
+
+    filter:
+      blur(6px);
+
+    transform:
+      translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+
+    filter:
+      blur(0);
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* =========================================
+   DESCRIPCIÓN
+========================================= */
+
+.contactCTA__descripcion {
+  max-width: 650px;
+
+  margin:
+    20px 0 0;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.83
+    );
+
+  font-size: 15px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================
+   DATOS
+========================================= */
+
+.contactCTA__datos {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+
+/* =========================================
+   DATO
+========================================= */
+
+.contactCTA__dato {
+  min-width: 220px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding:
+    10px 13px;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.22
+    );
+
+  border-radius: 15px;
+
+  background:
+    rgba(
+      26,
+      55,
+      34,
+      0.28
+    );
+
+  color: white;
+
+  text-decoration: none;
+
+  backdrop-filter:
+    blur(10px);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.contactCTA__dato:hover {
+  transform:
+    translateY(-3px);
+
+  border-color:
+    var(--contact-amarillo);
+
+  background:
+    rgba(
+      218,
+      146,
+      49,
+      0.22
+    );
+}
+
+
+/* =========================================
+   ICONO DATO
+========================================= */
+
+.contactCTA__datoIcono {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--contact-verde-claro),
+      var(--contact-naranja)
+    );
+
+  color: white;
+}
+
+
+.contactCTA__dato > div {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+
+.contactCTA__dato small {
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.58
+    );
+}
+
+
+.contactCTA__dato strong {
+  font-size: 11px;
+
+  font-weight: 700;
+
+  color: white;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   ACCIONES
+========================================= */
+
+.contactCTA__acciones {
+  margin-top: 24px;
+
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+
+/* =========================================
+   BOTONES
+========================================= */
+
+.contactCTA__boton {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  min-height: 47px;
+
+  padding:
+    0 18px;
+
+  border-radius: 999px;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* =========================================
+   PRINCIPAL
+========================================= */
+
+.contactCTA__boton--principal {
+  border:
+    2px solid
+    var(--contact-amarillo);
+
+  background:
+    linear-gradient(
+      100deg,
+      #e99036,
+      #f4c95e
+    );
+
+  color:
+    #3b341e;
+
+  box-shadow:
+    0 12px 28px
+    rgba(
+      224,
+      151,
+      50,
+      0.24
+    );
+}
+
+
+.contactCTA__boton--principal:hover {
+  transform:
+    translateY(-4px);
+
+  background:
+    white;
+
+  border-color:
+    white;
+
+  color:
+    var(--contact-verde-oscuro);
+
+  box-shadow:
+    0 16px 35px
+    rgba(
+      0,
+      0,
+      0,
+      0.18
+    );
+}
+
+
+.contactCTA__boton--principal
+svg:last-child {
+  transition:
+    transform
+    0.25s
+    ease;
+}
+
+
+.contactCTA__boton--principal:hover
+svg:last-child {
+  transform:
+    translateX(4px);
+}
+
+
+/* =========================================
+   SECUNDARIO
+========================================= */
+
+.contactCTA__boton--secundario {
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.38
+    );
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.1
+    );
+
+  color: white;
+
+  backdrop-filter:
+    blur(10px);
+}
+
+
+.contactCTA__boton--secundario:hover {
+  transform:
+    translateY(-3px);
+
+  border-color:
+    var(--contact-naranja);
+
+  background:
+    var(--contact-naranja);
+
+  color: white;
+}
+
+
+/* =========================================
+   SELLO
+========================================= */
+
+.contactCTA__sello {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================
+   CÍRCULO
+========================================= */
+
+.contactCTA__selloCirculo {
+  position: relative;
+
+  width: 250px;
+  height: 250px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.32
+    );
+
+  border-radius: 50%;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.1
+    );
+
+  color: white;
+
+  backdrop-filter:
+    blur(14px);
+
+  box-shadow:
+    inset
+    0 0 45px
+    rgba(
+      255,
+      255,
+      255,
+      0.05
+    ),
+    0 25px 60px
+    rgba(
+      30,
+      40,
+      25,
+      0.15
+    );
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    background 0.4s ease;
+}
+
+
+.contactCTA__selloCirculo::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 13px;
+
+  border:
+    1px dashed
+    rgba(
+      255,
+      224,
+      134,
+      0.55
+    );
+
+  border-radius: 50%;
+
+  animation:
+    contactSealRotation
+    24s
+    linear
+    infinite;
+}
+
+
+@keyframes contactSealRotation {
+
+  to {
+    transform:
+      rotate(360deg);
+  }
+
+}
+
+
+.contactCTA__selloCirculo:hover {
+  transform:
+    rotate(-2deg)
+    scale(1.04);
+
+  border-color:
+    var(--contact-amarillo);
+
+  background:
+    rgba(
+      255,
+      201,
+      91,
+      0.13
+    );
+}
+
+
+/* =========================================
+   TEXTO SELLO
+========================================= */
+
+.contactCTA__selloPequeno {
+  position: relative;
+
+  z-index: 2;
+
+  margin-bottom: 7px;
+
+  color:
+    #ffe195;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+}
+
+
+.contactCTA__selloGrande {
+  position: relative;
+
+  z-index: 2;
+
+  display: block;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 39px;
+
+  font-style: italic;
+
+  font-weight: 600;
+
+  line-height: 0.86;
+}
+
+
+.contactCTA__selloCirculo small {
+  position: relative;
+
+  z-index: 2;
+
+  margin-top: 15px;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.67
+    );
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (
+  max-width: 950px
+) {
+
+  .contactCTA {
+    min-height:
+      auto;
+  }
+
+
+  .contactCTA__contenedor {
+    grid-template-columns:
+      1fr auto;
+
+    gap: 35px;
+
+    padding:
+      60px 0;
+  }
+
+
+  .contactCTA__selloCirculo {
+    width: 190px;
+    height: 190px;
+  }
+
+
+  .contactCTA__selloGrande {
+    font-size: 31px;
+  }
+
+}
+
+
+/* =========================================
+   TABLET PEQUEÑA
+========================================= */
+
+@media (
+  max-width: 760px
+) {
+
+  .contactCTA__contenedor {
+    grid-template-columns:
+      1fr;
+
+    gap: 38px;
+
+    padding:
+      55px 0;
+  }
+
+
+  .contactCTA__contenido {
+    max-width:
+      none;
+  }
+
+
+  .contactCTA__sello {
+    justify-content:
+      flex-start;
+  }
+
+
+  .contactCTA__selloCirculo {
+    width: 160px;
+    height: 160px;
+  }
+
+
+  .contactCTA__selloGrande {
+    font-size: 26px;
+  }
+
+
+  .contactCTA__selloCirculo::before {
+    inset: 9px;
+  }
+
+}
+
+
+/* =========================================
+   MÓVIL
+========================================= */
+
+@media (
+  max-width: 600px
+) {
+
+  .contactCTA__contenedor {
+    width:
+      calc(
+        100% - 28px
+      );
+
+    padding:
+      50px 0;
+  }
+
+
+  .contactCTA__eyebrow {
+    font-size: 8px;
+
+    letter-spacing:
+      1.15px;
+  }
+
+
+  .contactCTA__titulo {
+    font-size:
+      38px;
+
+    letter-spacing:
+      -1px;
+  }
+
+
+  .contactCTA__descripcion {
+    font-size: 14px;
+  }
+
+
+  .contactCTA__datos {
+    flex-direction:
+      column;
+  }
+
+
+  .contactCTA__dato {
+    width:
+      100%;
+
+    min-width:
+      0;
+  }
+
+
+  .contactCTA__acciones {
+    flex-direction:
+      column;
+
+    align-items:
+      stretch;
+  }
+
+
+  .contactCTA__boton {
+    width:
+      100%;
+  }
+
+
+  .contactCTA__sello {
+    justify-content:
+      center;
+  }
+
+
+  /*
+   * En móvil reducimos ligeramente
+   * el movimiento lateral para evitar
+   * que se vea demasiado brusco.
+   */
+
+  @keyframes contactCarousel {
+
+    0% {
+      opacity: 0;
+
+      transform:
+        translateX(-3%)
+        scale(1.08);
+    }
+
+
+    5% {
+      opacity: 1;
+
+      transform:
+        translateX(-1%)
+        scale(1.07);
+    }
+
+
+    20% {
+      opacity: 1;
+
+      transform:
+        translateX(1%)
+        scale(1.06);
+    }
+
+
+    26% {
+      opacity: 0;
+
+      transform:
+        translateX(3%)
+        scale(1.05);
+    }
+
+
+    100% {
+      opacity: 0;
+
+      transform:
+        translateX(3%)
+        scale(1.05);
+    }
+
+  }
+
+}
+
+
+/* =========================================
+   REDUCIR MOVIMIENTO
+========================================= */
+
+@media (
+  prefers-reduced-motion:
+  reduce
+) {
+
+  .contactCTA__slide {
+    animation:
+      none;
+
+    opacity:
+      0;
+  }
+
+
+  .contactCTA__slide:first-child {
+    opacity:
+      1;
+  }
+
+
+  .contactCTA__selloCirculo::before {
+    animation:
+      none;
+  }
+
+
+  .contactCTA__titulo,
+  .contactCTA__dato,
+  .contactCTA__boton,
+  .contactCTA__selloCirculo {
+    animation:
+      none;
+
+    transition:
+      none;
+  }
+
+}

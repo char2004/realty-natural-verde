@@ -1,0 +1,602 @@
+.admin-pending {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+
+  padding: 40px 20px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f9f5e9 0%,
+      #fffdf7 45%,
+      #edf4e4 100%
+    );
+}
+
+
+/* =========================================
+   FORMAS DECORATIVAS
+   ========================================= */
+
+.admin-pending__shape {
+  position: absolute;
+
+  border-radius: 999px;
+
+  pointer-events: none;
+
+  filter: blur(4px);
+}
+
+
+.admin-pending__shape--one {
+  width: 430px;
+  height: 430px;
+
+  top: -180px;
+  left: -150px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(236, 191, 71, 0.35),
+      rgba(205, 132, 32, 0.14)
+    );
+}
+
+
+.admin-pending__shape--two {
+  width: 510px;
+  height: 510px;
+
+  right: -200px;
+  bottom: -230px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(80, 131, 63, 0.28),
+      rgba(129, 163, 93, 0.12)
+    );
+}
+
+
+/* =========================================
+   TARJETA
+   ========================================= */
+
+.admin-pending__card {
+  position: relative;
+  z-index: 2;
+
+  width: min(
+    100%,
+    540px
+  );
+
+  padding:
+    42px 40px 36px;
+
+  border:
+    1px solid
+    rgba(90, 99, 70, 0.12);
+
+  border-radius: 28px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.94
+    );
+
+  box-shadow:
+    0 26px 70px
+    rgba(
+      69,
+      75,
+      54,
+      0.13
+    );
+
+  text-align: center;
+}
+
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+.admin-pending__brand {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 20px;
+}
+
+
+.admin-pending__logo {
+  width: 160px;
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* =========================================
+   ICONO PRINCIPAL
+   ========================================= */
+
+.admin-pending__icon {
+  display: grid;
+  place-items: center;
+
+  width: 72px;
+  height: 72px;
+
+  margin:
+    0 auto 16px;
+
+  border-radius: 50%;
+}
+
+
+.admin-pending__icon--pending {
+  background:
+    #fff5d9;
+
+  color:
+    #b98825;
+
+  box-shadow:
+    0 0 0 8px
+    rgba(
+      244,
+      203,
+      105,
+      0.13
+    );
+}
+
+
+.admin-pending__icon--rejected {
+  background:
+    #fff0ec;
+
+  color:
+    #b65745;
+
+  box-shadow:
+    0 0 0 8px
+    rgba(
+      182,
+      87,
+      69,
+      0.09
+    );
+}
+
+
+/* =========================================
+   BADGES
+   ========================================= */
+
+.admin-pending__badge {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  margin-bottom: 16px;
+
+  padding:
+    7px 12px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+
+.admin-pending__badge--pending {
+  background:
+    #fff7e4;
+
+  color:
+    #9a741f;
+}
+
+
+.admin-pending__badge--rejected {
+  background:
+    #fff0ec;
+
+  color:
+    #a64e3e;
+}
+
+
+/* =========================================
+   ENCABEZADO
+   ========================================= */
+
+.admin-pending__header {
+  margin-bottom: 24px;
+}
+
+
+.admin-pending__header h1 {
+  margin: 0;
+
+  color:
+    #36442f;
+
+  font-size:
+    clamp(
+      29px,
+      5vw,
+      37px
+    );
+
+  line-height: 1.12;
+}
+
+
+.admin-pending__header p {
+  max-width: 400px;
+
+  margin:
+    11px auto 0;
+
+  color:
+    #777c70;
+
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+
+.admin-pending__header strong {
+  color:
+    #526447;
+}
+
+
+/* =========================================
+   MENSAJE
+   ========================================= */
+
+.admin-pending__message {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 13px;
+
+  padding:
+    16px;
+
+  border:
+    1px solid
+    #e4eadf;
+
+  border-radius: 16px;
+
+  background:
+    #f7faf4;
+
+  text-align: left;
+}
+
+
+.admin-pending__message-icon {
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  width: 38px;
+  height: 38px;
+
+  border-radius: 11px;
+
+  background:
+    #e5efde;
+
+  color:
+    #527543;
+}
+
+
+.admin-pending__message h2 {
+  margin:
+    1px 0 5px;
+
+  color:
+    #4b5e42;
+
+  font-size: 14px;
+}
+
+
+.admin-pending__message p {
+  margin: 0;
+
+  color:
+    #7a8174;
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   PROGRESO
+   ========================================= */
+
+.admin-pending__status {
+  margin:
+    25px 4px 0;
+
+  padding:
+    20px;
+
+  border:
+    1px solid
+    #ecece4;
+
+  border-radius: 17px;
+
+  background:
+    #fdfdf9;
+
+  text-align: left;
+}
+
+
+.admin-pending__status-step {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.admin-pending__status-step > div:last-child {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+
+.admin-pending__status-step strong {
+  color:
+    #555e4e;
+
+  font-size: 13px;
+}
+
+
+.admin-pending__status-step span {
+  color:
+    #96998e;
+
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+
+.admin-pending__step-icon {
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50%;
+
+  background:
+    #eeeee9;
+
+  color:
+    #a6a99e;
+}
+
+
+.admin-pending__step-icon--complete {
+  background:
+    #e5f0de;
+
+  color:
+    #4f7940;
+}
+
+
+.admin-pending__step-icon--current {
+  background:
+    #fff0c7;
+
+  color:
+    #a87c22;
+}
+
+
+.admin-pending__status-line {
+  width: 2px;
+  height: 18px;
+
+  margin:
+    4px 0 4px 17px;
+
+  background:
+    #e3e4dd;
+}
+
+
+.admin-pending__status-step--disabled {
+  opacity: 0.62;
+}
+
+
+/* =========================================
+   ACTUALIZACIÓN AUTOMÁTICA
+   ========================================= */
+
+.admin-pending__automatic {
+  margin:
+    17px auto 0;
+
+  color:
+    #989b90;
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   RECHAZADO
+   ========================================= */
+
+.admin-pending__rejected-message {
+  padding:
+    17px;
+
+  border:
+    1px solid
+    #f0d8d2;
+
+  border-radius: 15px;
+
+  background:
+    #fff7f5;
+}
+
+
+.admin-pending__rejected-message p {
+  margin: 0;
+
+  color:
+    #865f57;
+
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+
+/* =========================================
+   CERRAR SESIÓN
+   ========================================= */
+
+.admin-pending__logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  width: 100%;
+
+  min-height: 49px;
+
+  margin-top: 24px;
+
+  border:
+    1px solid
+    #dcded5;
+
+  border-radius: 14px;
+
+  background:
+    #ffffff;
+
+  color:
+    #64695f;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.admin-pending__logout:hover:not(:disabled) {
+  transform:
+    translateY(-1px);
+
+  border-color:
+    #c9cfc1;
+
+  background:
+    #f8faf5;
+
+  color:
+    #49623e;
+}
+
+
+.admin-pending__logout:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (
+  max-width: 600px
+) {
+
+  .admin-pending {
+    padding:
+      24px 14px;
+  }
+
+
+  .admin-pending__card {
+    padding:
+      34px 22px 28px;
+
+    border-radius:
+      22px;
+  }
+
+
+  .admin-pending__logo {
+    width:
+      145px;
+  }
+
+
+  .admin-pending__header h1 {
+    font-size:
+      29px;
+  }
+
+
+  .admin-pending__status {
+    padding:
+      17px 14px;
+  }
+
+}

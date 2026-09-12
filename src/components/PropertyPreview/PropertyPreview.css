@@ -1,0 +1,405 @@
+/* ================================
+   PROPERTY PREVIEW
+================================ */
+
+.propertyPreview {
+  width: 100%;
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding:
+    92px 0 100px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff 0%,
+      #f9f7ee 48%,
+      #f2f7e9 100%
+    );
+}
+
+
+/* ================================
+   CONTENEDOR
+================================ */
+
+.propertyPreview__contenedor {
+  width:
+    min(1380px, 92%);
+
+  margin: 0 auto;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* ================================
+   FORMAS DECORATIVAS
+================================ */
+
+.propertyPreview__forma {
+  position: absolute;
+
+  pointer-events: none;
+}
+
+
+.propertyPreview__forma--izquierda {
+  width: 430px;
+  height: 430px;
+
+  left: -260px;
+  top: 110px;
+
+  border-radius:
+    58% 42% 67% 33% /
+    43% 52% 48% 57%;
+
+  background:
+    linear-gradient(
+      140deg,
+      rgba(91, 151, 39, 0.13),
+      rgba(225, 169, 38, 0.06)
+    );
+
+  transform:
+    rotate(22deg);
+}
+
+
+.propertyPreview__forma--derecha {
+  width: 390px;
+  height: 390px;
+
+  right: -240px;
+  bottom: -130px;
+
+  border-radius:
+    42% 58% 35% 65% /
+    57% 42% 58% 43%;
+
+  background:
+    linear-gradient(
+      140deg,
+      rgba(223, 157, 27, 0.12),
+      rgba(91, 151, 39, 0.1)
+    );
+
+  transform:
+    rotate(-25deg);
+}
+
+
+/* ================================
+   ENCABEZADO
+================================ */
+
+.propertyPreview__encabezado {
+  max-width: 720px;
+
+  margin:
+    0 auto 46px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+
+.propertyPreview__icono {
+  width: 46px;
+  height: 46px;
+
+  margin-bottom: 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius:
+    50% 50% 50% 15%;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #5e9b2b,
+      #82af37
+    );
+
+  box-shadow:
+    0 7px 20px
+    rgba(86, 139, 42, 0.2);
+}
+
+
+.propertyPreview__eyebrow {
+  margin-bottom: 10px;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  color: #c28719;
+}
+
+
+.propertyPreview__titulo {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(
+      34px,
+      4vw,
+      46px
+    );
+
+  line-height: 1.05;
+
+  font-weight: 500;
+
+  color: #352d23;
+}
+
+
+.propertyPreview__titulo span {
+  display: block;
+
+  margin-top: 4px;
+
+  font-style: italic;
+
+  color: #609a2d;
+}
+
+
+.propertyPreview__descripcion {
+  max-width: 620px;
+
+  margin:
+    18px auto 0;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+
+  color: #706a61;
+}
+
+
+/* ================================
+   GRID
+================================ */
+
+.propertyPreview__grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 28px;
+
+  align-items: stretch;
+}
+
+
+/*
+  Nuestro PropertyCard tenía un ancho fijo
+  para los carruseles.
+
+  Aquí hacemos que ocupe toda la columna.
+*/
+
+.propertyPreview__grid
+.propertyCard {
+
+  width: 100%;
+  min-width: 0;
+
+}
+
+
+/* ================================
+   BOTÓN FINAL
+================================ */
+
+.propertyPreview__acciones {
+  margin-top: 55px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+
+.propertyPreview__acciones p {
+  margin:
+    0 0 17px;
+
+  font-size: 13px;
+
+  color: #756e64;
+}
+
+
+.propertyPreview__boton {
+  min-height: 52px;
+
+  padding:
+    0 25px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  border:
+    1px solid
+    rgba(84, 139, 39, 0.4);
+
+  border-radius:
+    28px 28px 28px 9px;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      115deg,
+      #558f27,
+      #74a72f 55%,
+      #c99322 100%
+    );
+
+  box-shadow:
+    0 9px 23px
+    rgba(75, 113, 39, 0.19);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.propertyPreview__boton:hover {
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 14px 29px
+    rgba(75, 113, 39, 0.28);
+}
+
+
+.propertyPreview__boton svg {
+  transition:
+    transform 0.25s ease;
+}
+
+
+.propertyPreview__boton:hover svg {
+  transform:
+    translateX(4px);
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1000px) {
+
+  .propertyPreview__grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+}
+
+
+/* ================================
+   MÓVIL
+================================ */
+
+@media (max-width: 650px) {
+
+  .propertyPreview {
+    padding:
+      65px 0 72px;
+  }
+
+
+  .propertyPreview__contenedor {
+    width: 90%;
+  }
+
+
+  .propertyPreview__encabezado {
+    margin-bottom: 35px;
+  }
+
+
+  .propertyPreview__grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 21px;
+  }
+
+
+  .propertyPreview__titulo {
+    font-size: 33px;
+  }
+
+
+  .propertyPreview__acciones {
+    margin-top: 40px;
+  }
+
+
+  .propertyPreview__boton {
+    width: 100%;
+
+    max-width: 330px;
+  }
+
+}
